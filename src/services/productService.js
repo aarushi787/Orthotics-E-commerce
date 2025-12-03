@@ -1,32 +1,31 @@
-import { collection, doc, getDocs } from "firebase/firestore";
-import { db } from "../firebase";
+// src/services/productService.js
+import { API_BASE, apiGet } from "./api";
 
-// Fetch products + first Firestore image 
-export async function getProductsWithImages() {
-  const res = await fetch("http://localhost:5001/api/products");
-  const products = await res.json();
+export async function fetchProducts() {
+  try {
+    const data = await apiGet("/api/products"); 
 
-  const updated = await Promise.all(
-    products.map(async (product) => {
-      try {
-        const slug = product.slug;    // e.g. abdominal-belt
-        const imagesRef = collection(doc(db, "products", slug), "images");
-        const snap = await getDocs(imagesRef);
-        const urls = snap.docs.map((doc) => doc.data().url);
+    if (!data.success || !Array.isArray(data.products)) {
+      console.error("Invalid response:", data);
+      return [];
+    }
 
-        return {
-          ...product,
-          image: urls[0] || null   // first Firestore image
-        };
-      } catch (err) {
-        console.error(`Image load failed for: ${product.slug}`, err);
-        return {
-          ...product,
-          image: null
-        };
-      }
-    })
-  );
+    return data.products;
+  } catch (err) {
+    console.error("fetchProducts error:", err);
+    return [];
+  }
+}
 
-  return updated;
+export async function fetchProductById(id) {
+  try {
+    const data = await apiGet(`/api/products/${id}`);
+
+    if (!data.success) return null;
+
+    return data.product;
+  } catch (err) {
+    console.error("fetchProductById error:", err);
+    return null;
+  }
 }

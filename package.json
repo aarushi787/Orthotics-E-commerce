@@ -7,22 +7,51 @@
     "dev": "vite",
     "import-images": "node scripts/import-sample-images.js",
     "build": "vite build",
+    "build:admin": "cd Fox-Orthotics-Admin && npm run build",
+    "prepare:admin": "node ./scripts/copy-admin-build.cjs",
+    "prepare:functions": "node ./scripts/copy-server-to-functions.cjs && npm --prefix functions install",
+    "build:all": "npm run build && npm run build:admin && npm run prepare:admin && npm run prepare:functions",
     "preview": "vite preview",
+    "deploy:prod": "npm run build:all && firebase deploy --only \"hosting,functions\"",
     "generate-sitemap": "node scripts/generate-sitemap.cjs",
     "generate-robots": "node scripts/generate-robots.cjs",
     "generate-all": "npm run generate-sitemap && npm run generate-robots"
   },
   "dependencies": {
     "@google/genai": "^1.29.1",
+    "@sendgrid/mail": "^8.1.6",
+    "axios": "^1.13.2",
+    "bcryptjs": "^3.0.3",
     "firebase": "^12.6.0",
+    "firebase-admin": "^13.6.0",
+    "firebase-functions": "^7.0.0",
     "groq-sdk": "^0.36.0",
+    "npx": "^3.0.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.9.6",
+    "recharts": "^3.5.1"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.17",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
-  }
+  },
+  "description": "This contains everything you need to run your app locally.",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aarushi787/Orthotics-E-commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aarushi787/Orthotics-E-commerce/issues"
+  },
+  "homepage": "https://github.com/aarushi787/Orthotics-E-commerce#readme"
 }
