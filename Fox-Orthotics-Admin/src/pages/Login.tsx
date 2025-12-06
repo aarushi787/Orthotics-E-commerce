@@ -3,15 +3,19 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const loginAdmin = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const uid = userCredential.user.uid;
@@ -21,42 +25,71 @@ export default function Login() {
 
       if (!adminSnap.exists() || adminSnap.data().role !== "admin") {
         setError("Access denied. You are not an admin.");
+        setLoading(false);
         return;
       }
 
       navigate("/dashboard");
-    } catch (err) {
-      setError("Invalid login credentials");
+    } catch (err: any) {
+      setError(err.message || "Invalid login credentials");
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-slate-100">
-      <form onSubmit={loginAdmin} className="bg-white p-10 shadow-xl rounded-lg w-96">
-        <h2 className="text-2xl font-bold text-center mb-6">Admin Login</h2>
+    <div className="login-container">
+      <div className="login-card">
+        <div className="login-header">
+          <div className="login-logo">🏥</div>
+          <h1 className="login-title">Fox Orthotics</h1>
+          <p className="login-subtitle">Admin Dashboard</p>
+        </div>
 
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-full p-2 border mb-4 rounded"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <form onSubmit={loginAdmin}>
+          <div className="login-form-group">
+            <label className="login-label">Email Address</label>
+            <input
+              type="email"
+              placeholder="admin@example.com"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="login-input"
+            />
+          </div>
 
-        <input
-          type="password"
-          placeholder="Password"
-          className="w-full p-2 border mb-4 rounded"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <div className="login-password-group">
+            <label className="login-label">Password</label>
+            <input
+              type="password"
+              placeholder="••••••••"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="login-input"
+            />
+          </div>
 
-        <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
-          Login
-        </button>
+          <button
+            type="submit"
+            disabled={loading}
+            className="login-button"
+          >
+            {loading ? "Logging in..." : "Sign In"}
+          </button>
 
-        {error && <p className="text-red-500 text-center mt-2">{error}</p>}
-      </form>
+          {error && (
+            <div className="login-error">
+              ⚠️ {error}
+            </div>
+          )}
+        </form>
+
+        <div className="login-footer">
+          © 2024 Fox Orthotics Admin. All rights reserved.
+        </div>
+      </div>
     </div>
   );
 }

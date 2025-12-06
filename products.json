@@ -124,3 +124,5 @@
   { "id": 123, "name": "Wrist Band Neo", "sku": "MDL-010", "price": 40, "originalPrice": 229, "sizes": ["Left", "Right"], "category": "Wrist & Hand Braces", "rating": 4.8, "moq": 120, "material": "Neoprene", "certifications": ["ISO Certified"], "inStock": false, "bulkAvailable": true, "description": "Neoprene wristband for compression and support during activities.", "features": ["Wrap-around design", "Thumb loop", "Provides warmth"], "imageUrls": ["images/mdl-010.jpg"] },
   { "id": 124, "name": "Wrist Splint", "sku": "MDL-032", "price": 120, "originalPrice": 410, "sizes": ["Universal"], "category": "Wrist & Hand Braces", "rating": 4.9, "moq": 60, "material": "Neoprene", "certifications": ["CE Certified"], "inStock": true, "bulkAvailable": true, "description": "Provides firm support to the wrist, helping to relieve pain.", "features": ["Removable splint", "Adjustable compression", "Comfortable for daily wear"], "imageUrls": ["images/mdl-032.jpg"] }
 ]
+
+

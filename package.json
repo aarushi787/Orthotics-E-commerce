@@ -15,7 +15,12 @@
     "deploy:prod": "npm run build:all && firebase deploy --only \"hosting,functions\"",
     "generate-sitemap": "node scripts/generate-sitemap.cjs",
     "generate-robots": "node scripts/generate-robots.cjs",
-    "generate-all": "npm run generate-sitemap && npm run generate-robots"
+    "generate-all": "npm run generate-sitemap && npm run generate-robots",
+    "optimize:images": "node scripts/optimize-images.cjs",
+    "migrate:products": "node scripts/migrate-products.cjs",
+    "migrate:products:dry-run": "node scripts/migrate-products.cjs --dry-run",
+    "optimize:all": "npm run build:all && npm run optimize:images && echo 'Images optimized! Next: npm run migrate:products:dry-run'",
+    "set:sendgrid-secret": "node ./scripts/set-sendgrid-secret.cjs"
   },
   "dependencies": {
     "@google/genai": "^1.29.1",

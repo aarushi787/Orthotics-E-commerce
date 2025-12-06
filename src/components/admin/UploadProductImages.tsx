@@ -17,7 +17,8 @@ export default function UploadProductImages() {
       const url = await getDownloadURL(fileRef);
 
       await updateDoc(doc(db, "products", sku), {
-        [`images.${color}`]: arrayUnion(url)
+        [`images.${color}`]: arrayUnion(url),
+        imageUrls: arrayUnion(url)
       });
     }
 

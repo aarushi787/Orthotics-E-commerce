@@ -19,7 +19,13 @@ return(
     {rec.map((p:any)=>(
       <div key={p.id} className="p-4 bg-white dark:bg-black rounded shadow">
         <img
-          src={(p.images && p.images[0]) || (p.imageUrls && (p.imageUrls[0].startsWith('/') ? p.imageUrls[0] : '/' + p.imageUrls[0])) || `/images/no-image.png`}
+          src={
+            (p.imageUrls && p.imageUrls[0])
+              ? (p.imageUrls[0].startsWith('/') ? p.imageUrls[0] : '/' + p.imageUrls[0])
+              : (p.images && p.images[0])
+                ? (p.images[0].startsWith('/') ? p.images[0] : '/' + p.images[0])
+                : `/images/no-image.png`
+          }
           className="h-40 mx-auto"
           alt={p.name || 'product'}
           loading="lazy"

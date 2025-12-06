@@ -3,13 +3,14 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
+// Firebase configuration - hardcoded for admin dashboard
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MSG_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID
+  apiKey: "AIzaSyBWhPaX_8p_gjkHWVLWC8tL4kHDymJHkLY",
+  authDomain: "e-commerce-61d74.firebaseapp.com",
+  projectId: "e-commerce-61d74",
+  storageBucket: "e-commerce-61d74.appspot.com",
+  messagingSenderId: "198190809332",
+  appId: "1:198190809332:web:acb53523a6474abbb3dea1"
 };
 
 const app = initializeApp(firebaseConfig);

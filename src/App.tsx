@@ -1,26 +1,29 @@
 // src/App.tsx
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, Suspense, lazy } from "react";
 
 // ⬇️ Components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import LoginPage from "./components/LoginPage";
-import ProductDetailPage from "./components/ProductDetailPage";
-import ProductListingPage from "./components/ProductListingPage";
-import AboutPage from "./components/AboutPage";
-import ContactPage from "./components/ContactPage";
-import DealerPage from "./components/DealerPage";
-import WishlistPage from "./components/WishlistPage";
-import CartPage from "./components/CartPage";
+import FloatingWhatsAppButton from "./components/FloatingWhatsAppButton";
+import HomePage from "./components/HomePage";
+const LoginPage = lazy(() => import("./components/LoginPage"));
+const ProductDetailPage = lazy(() => import("./components/ProductDetailPage"));
+const ProductListingPage = lazy(() => import("./components/ProductListingPage"));
+const AboutPage = lazy(() => import("./components/AboutPage"));
+const ContactPage = lazy(() => import("./components/ContactPage"));
+const DealerPage = lazy(() => import("./components/DealerPage"));
+const WishlistPage = lazy(() => import("./components/WishlistPage"));
+const CartPage = lazy(() => import("./components/CartPage"));
 import Toast from "./components/Toast";
 import PageTransition from "./components/PageTransition";
 import SkeletonCard from "./components/SkeletonCard";
 
-// ⬇️ Admin Panel
-import AdminApp from "./admin/AdminApp";
+// ⬇️ Admin Panel (lazy-load admin bundle)
+const AdminApp = lazy(() => import("./admin/AdminApp"));
 
 // ⬇️ Services & Types
 import api from "./services/api";
+import { resolveImagePaths } from "./services/storage";
 import type { Product, FiltersState, CartItem } from "./types";
 import { INITIAL_FILTERS } from "./constants";
 
@@ -59,7 +62,43 @@ const App: React.FC = () => {
         const list = Array.isArray(response?.products)
           ? response.products
           : [];
-        setProducts(list);
+
+        // Resolve any Storage paths to usable download URLs (client-side fallback)
+        const withResolvedImages = await Promise.all(
+          list.map(async (p: any) => {
+            // If server returned `images` as either an array or an object of arrays, flatten and keep them
+            if (p.images) {
+              if (Array.isArray(p.images) && p.images.length) {
+                p.imageUrls = p.images;
+                return p;
+              }
+              if (typeof p.images === 'object') {
+                const flattened = Object.values(p.images).flat().filter(Boolean);
+                if (flattened.length) {
+                  p.imageUrls = flattened;
+                  return p;
+                }
+              }
+            }
+
+            // If product stores storage paths in `imagePaths`, resolve them
+            if (Array.isArray(p.imagePaths) && p.imagePaths.length) {
+              p.imageUrls = await resolveImagePaths(p.imagePaths);
+              return p;
+            }
+
+            // If product has `imageUrls` (may be storage paths or URLs), resolve them
+            if (Array.isArray(p.imageUrls) && p.imageUrls.length) {
+              p.imageUrls = await resolveImagePaths(p.imageUrls);
+              return p;
+            }
+
+            // fallback: try to construct from sku convention (kept existing behaviour)
+            return p;
+          })
+        );
+
+        setProducts(withResolvedImages);
       } catch (err) {
         console.error("Error fetching products:", err);
         try {
@@ -195,63 +234,107 @@ const App: React.FC = () => {
   // 🧭 HASH ROUTER PAGES
   const renderPage = () => {
     if (currentPath.startsWith("#/admin"))
-      return <AdminApp />;
+      return (
+        <Suspense fallback={<div>Loading admin…</div>}>
+          <AdminApp />
+        </Suspense>
+      );
 
     if (currentPath.startsWith("#/product/")) {
       const id = currentPath.split("/")[2];
       const product = products.find((p) => String(p.id) === String(id));
 
       return product ? (
-        <ProductDetailPage
-          product={product}
-          allProducts={products}
-          wishlist={wishlist}
-          onToggleWishlist={handleToggleWishlist}
-          onAddToCart={handleAddToCart}
-        />
+        <Suspense fallback={<div>Loading product…</div>}>
+          <ProductDetailPage
+            product={product}
+            allProducts={products}
+            wishlist={wishlist}
+            onToggleWishlist={handleToggleWishlist}
+            onAddToCart={handleAddToCart}
+          />
+        </Suspense>
       ) : (
         <p>Product not found</p>
       );
     }
 
-    if (currentPath === "#/login") return <LoginPage />;
-    if (currentPath === "#/about") return <AboutPage />;
-    if (currentPath === "#/contact") return <ContactPage />;
-    if (currentPath === "#/dealer") return <DealerPage />;
+    if (currentPath === "#/login")
+      return (
+        <Suspense fallback={<div>Loading…</div>}>
+          <LoginPage />
+        </Suspense>
+      );
+    if (currentPath === "#/about")
+      return (
+        <Suspense fallback={<div>Loading…</div>}>
+          <AboutPage />
+        </Suspense>
+      );
+    if (currentPath === "#/contact")
+      return (
+        <Suspense fallback={<div>Loading…</div>}>
+          <ContactPage />
+        </Suspense>
+      );
+    if (currentPath === "#/dealer")
+      return (
+        <Suspense fallback={<div>Loading…</div>}>
+          <DealerPage />
+        </Suspense>
+      );
 
     if (currentPath === "#/wishlist")
       return (
-        <WishlistPage
-          wishlist={wishlist}
-          allProducts={products}
-          onToggleWishlist={handleToggleWishlist}
-          onAddToCart={handleAddToCart}
-        />
+        <Suspense fallback={<div>Loading…</div>}>
+          <WishlistPage
+            wishlist={wishlist}
+            allProducts={products}
+            onToggleWishlist={handleToggleWishlist}
+            onAddToCart={handleAddToCart}
+          />
+        </Suspense>
       );
 
     if (currentPath === "#/cart")
       return (
-        <CartPage
-          cartItems={cart}
-          onUpdateQuantity={handleUpdateCartQuantity}
-          onRemoveItem={handleRemoveFromCart}
-        />
+        <Suspense fallback={<div>Loading…</div>}>
+          <CartPage
+            cartItems={cart}
+            onUpdateQuantity={handleUpdateCartQuantity}
+            onRemoveItem={handleRemoveFromCart}
+          />
+        </Suspense>
       );
 
+    // Show HomePage for root path
+    if (currentPath === "#/") {
+      return (
+        <HomePage
+          products={products}
+          wishlist={wishlist}
+          onToggleWishlist={handleToggleWishlist}
+          onAddToCart={handleAddToCart}
+        />
+      );
+    }
+
     return (
-      <ProductListingPage
-        products={filteredProducts}
-        filters={filters}
-        searchQuery={searchQuery}
-        onFilterChange={setFilters}
-        onClearFilters={() => setFilters(INITIAL_FILTERS)}
-        wishlist={wishlist}
-        onToggleWishlist={handleToggleWishlist}
-        onAddToCart={handleAddToCart}
-        sortOption={sortOption}
-        onSortChange={setSortOption}
-        pageTitle="All Products"
-      />
+      <Suspense fallback={<div>Loading products…</div>}>
+        <ProductListingPage
+          products={filteredProducts}
+          filters={filters}
+          searchQuery={searchQuery}
+          onFilterChange={setFilters}
+          onClearFilters={() => setFilters(INITIAL_FILTERS)}
+          wishlist={wishlist}
+          onToggleWishlist={handleToggleWishlist}
+          onAddToCart={handleAddToCart}
+          sortOption={sortOption}
+          onSortChange={setSortOption}
+          pageTitle="All Products"
+        />
+      </Suspense>
     );
   };
 
@@ -285,6 +368,8 @@ const App: React.FC = () => {
         type={toast?.type}
         isVisible={!!toast}
       />
+
+      <FloatingWhatsAppButton />
     </div>
   );
 };

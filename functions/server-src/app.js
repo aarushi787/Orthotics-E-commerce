@@ -25,6 +25,15 @@ const createApp = () => {
 
   app.get("/health", (_, res) => res.json({ status: "running" }));
 
+  // Additional health endpoint accessible via hosting rewrite (/api/health)
+  app.get("/api/health", (_, res) =>
+    res.json({
+      status: "running",
+      env: process.env.NODE_ENV || "unknown",
+      time: new Date().toISOString(),
+    })
+  );
+
   return app;
 };
 

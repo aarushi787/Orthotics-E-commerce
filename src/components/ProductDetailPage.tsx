@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from "react";
 import { Product } from "../types";
 import ProductCard from "./ProductCard";
 import ImageGallery from "./ImageGallery";            // Our upgraded component
-import CompareBar from "./CompareBar";                // New
 import ReviewSystem from "./ReviewSystem";            // New
 import VideoGallery from "./VideoGallery";            // New
 import {
   StarIcon, HeartIcon, ShoppingCartIcon,
   ShieldCheckIcon, CheckIcon, TruckIcon
 } from "./icons";
+import { shareProductViaWhatsApp } from "../utils/whatsapp";
 
 
 interface Props {
@@ -36,57 +36,21 @@ const ProductDetailPage = ({ product, allProducts, wishlist, onToggleWishlist, o
 
   // ========================= STATE =========================
   const [selectedSize, setSelectedSize] = useState(product.sizes?.[0]);
-  const [quantity,setQuantity] = useState(1);
+  const [quantity,setQuantity] = useState(50);
   const isWishlisted = wishlist.includes(product.id);
 
 
   // ========================= SWIPE SUPPORT =========================
-  const [touchStart,setTouchStart] = useState<number|null>(null);
-
-  const swipeStart=(e:any)=>setTouchStart(e.touches[0].clientX);
-  const swipeEnd=(e:any)=>{
-    if(touchStart===null||baseImages.length<=1)return;
-    const end=e.changedTouches[0].clientX;
-    const diff=end-touchStart;
-    const i=baseImages.indexOf(selectedImage);
-    if(diff>50) setSelectedImage(baseImages[(i-1+baseImages.length)%baseImages.length]);
-    if(diff<-50)setSelectedImage(baseImages[(i+1)%baseImages.length]);
-    setTouchStart(null);
-  };
+  // Swipe handled inside ImageGallery
 
 
-  // ========================= AUTO-SLIDER =========================
-  const [selectedImage,setSelectedImage]=useState(baseImages[0]);
-  useEffect(()=>{
-    const timer=setInterval(()=>{
-      const i=baseImages.indexOf(selectedImage);
-      setSelectedImage(baseImages[(i+1)%baseImages.length]);
-    },3500);
-    return()=>clearInterval(timer);
-  },[selectedImage,baseImages]);
+  // ========================= AUTO-SLIDER (handled inside ImageGallery now) =========================
 
 
-  // ========================= ZOOM MAGNIFIER =========================
-  const containerRef=useRef<HTMLDivElement|null>(null);
-  const[zoom,setZoom]=useState({x:0,y:0,show:false});
-
-  const zoomMove=(e:any)=>{
-    if(!containerRef.current)return;
-    const r=containerRef.current.getBoundingClientRect();
-    const x=((e.clientX-r.left)/r.width)*100;
-    const y=((e.clientY-r.top)/r.height)*100;
-    setZoom({x,y,show:true});
-  };
-  const zoomOff=()=>setZoom(p=>({...p,show:false}));
+  // Zoom handled inside ImageGallery
 
 
-  // ========================= COMPARE SYSTEM =========================
-  const addCompare=()=>{
-    const list=JSON.parse(localStorage.getItem("compare")||"[]");
-    if(!list.includes(product.id)) list.push(product.id);
-    localStorage.setItem("compare",JSON.stringify(list));
-    alert("Added to Compare 🧾");
-  };
+
 
 
   // ========================= RELATED PRODUCTS =========================
@@ -112,26 +76,23 @@ const ProductDetailPage = ({ product, allProducts, wishlist, onToggleWishlist, o
 
 
         {/* ================= LEFT PANEL - IMAGES ================ */}
-        <div ref={containerRef}
-             onMouseMove={zoomMove}
-             onMouseLeave={zoomOff}
-             onTouchStart={swipeStart}
-             onTouchEnd={swipeEnd}
-             className="relative">
+        <div className="relative">
 
           {/* Main Component */}
-          <ImageGallery images={galleryImages} autoPlay delay={3500} />
+          {/* Normalize image URLs and pass SKU for better fallbacks */}
+          {
+            (() => {
+              const imgsArr: string[] = Array.isArray(baseImages) ? baseImages : [];
+              const normalized = imgsArr.map(u => {
+                if (!u) return '';
+                if (u.startsWith('http://') || u.startsWith('https://') || u.startsWith('/')) return u;
+                return u.startsWith('images/') ? `/${u}` : `/${u}`;
+              });
+              return <ImageGallery images={normalized} sku={product.sku} autoPlay delay={3500} />;
+            })()
+          }
 
-          {/* Zoom Circle */}
-          {zoom.show && (
-            <div className="absolute w-40 h-40 border-2 rounded-full pointer-events-none"
-              style={{
-                left:`${zoom.x}%`, top:`${zoom.y}%`,transform:"translate(-50%,-50%)",
-                background:`url(${selectedImage})`,
-                backgroundSize:"200%",backgroundPosition:`${zoom.x}% ${zoom.y}%`
-              }}
-            />
-          )}
+          {/* Zoom handled inside ImageGallery */}
 
           {video && <VideoGallery videoUrl={video} />}
         </div>
@@ -184,34 +145,42 @@ const ProductDetailPage = ({ product, allProducts, wishlist, onToggleWishlist, o
 
           <div className="flex gap-3 mb-6 items-center">
 
-            <input type="number" min={1} value={quantity}
-              onChange={e=>setQuantity(Math.max(1,Number(e.target.value)))}
-              className="w-20 p-2 border rounded text-center"/>
+            <input type="number" min={50} value={quantity}
+              onChange={e=>setQuantity(Math.max(50,Number(e.target.value)))}
+              aria-label={`Quantity for ${product.name}`}
+              title={`Quantity for ${product.name}`}
+              className="w-24 p-3 border rounded text-center font-semibold text-lg"/>
 
             <button onClick={()=>onAddToCart(product,quantity)}
-              className="flex-1 flex justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-bold">
+              title="Add to cart"
+              aria-label="Add to cart"
+              className="flex-1 flex justify-center items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-bold shadow-md transition">
               <ShoppingCartIcon className="w-5"/> Add to Cart
             </button>
 
-            <button onClick={()=>onToggleWishlist(product.id)}
-              className="p-3 rounded-lg border hover:bg-red-100">
-              <HeartIcon className="w-6 h-6" filled={isWishlisted}/>
-            </button>
+            <div className="flex items-center gap-2">
+              <button onClick={()=>onToggleWishlist(product.id)}
+                title="Toggle wishlist"
+                aria-label="Toggle wishlist"
+                className="p-3 rounded-lg border hover:bg-red-100">
+                <HeartIcon className="w-6 h-6" filled={isWishlisted}/>
+              </button>
 
-            <button onClick={addCompare}
-              className="px-3 py-3 border rounded-lg hover:bg-blue-50 flex items-center gap-1">
-              🔍 Compare
-            </button>
+              <button 
+                onClick={() => shareProductViaWhatsApp(product.name, `${window.location.origin}#/product/${product.id}`, product.price)}
+                title="Share on WhatsApp"
+                aria-label="Share on WhatsApp"
+                className="px-3 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 flex items-center gap-1">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-1.567.897-2.766 2.217-3.632 3.997-1.03 2.185-.96 4.607.214 6.552 1.05 1.786 3.065 3.265 5.456 3.904 1.504.425 3.056.427 4.527.126 1.075-.23 2.041-.616 2.87-1.141v-.001c.54-.343 1.027-.744 1.456-1.194.488-.528.871-1.087 1.165-1.691 1.122-2.329 1.15-5.142.158-7.509-.99-2.371-3.04-4.093-5.448-4.714-.88-.247-1.8-.353-2.695-.258zm.668 9.016c-.285-.424-.893-.58-1.438-.388-.545.192-1.056.782-1.242 1.587-.186.804.052 1.653.597 2.052.545.399 1.409.296 1.694-.128.285-.424.186-1.327 0-1.652-.186-.325-.546-.519-.611-.471z"/>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
-
-
-
-    {/* Sticky Compare Bar */}
-    <CompareBar products={allProducts}/>
 
 
 
@@ -221,13 +190,17 @@ const ProductDetailPage = ({ product, allProducts, wishlist, onToggleWishlist, o
       <div className="md:col-span-2 bg-white p-8 border rounded shadow">
 
         <h2 className="text-2xl font-bold mb-6">Specifications</h2>
-        <dl className="grid grid-cols-2 text-sm gap-y-2">
-          <dt>SKU</dt> <dd>{product.sku}</dd>
-          <dt>Material</dt><dd>{product.material}</dd>
-          <dt>Sizes</dt><dd>{product.sizes.join(", ")}</dd>
-          <dt>MOQ</dt><dd>{product.moq} pcs</dd>
-          <dt>Certifications</dt>
-          <dd>{product.certifications.join(", ")}</dd>
+        <dl className="grid grid-cols-2 text-sm gap-y-3 gap-x-6">
+          <dt className="text-gray-700 font-medium">SKU</dt>
+          <dd className="text-gray-600">{product.sku}</dd>
+          <dt className="text-gray-700 font-medium">Material</dt>
+          <dd className="text-gray-600">{product.material}</dd>
+          <dt className="text-gray-700 font-medium">Sizes</dt>
+          <dd className="text-gray-600">{product.sizes.join(", ")}</dd>
+          <dt className="text-gray-700 font-medium">MOQ</dt>
+          <dd className="text-gray-600">{product.moq} pcs</dd>
+          <dt className="text-gray-700 font-medium">Certifications</dt>
+          <dd className="text-gray-600">{product.certifications.join(", ")}</dd>
         </dl>
 
         <div className="mt-6">

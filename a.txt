@@ -1,0 +1,1200 @@
+{
+  "id": 1,
+  "name": "Abdominal Belt",
+  "sku": "MDL-101",
+  "category": "Abdominal Support",
+  "material": "Elastic",
+  "moq": 50,
+  "price": 480,
+  "features": [
+    "Contoured design adapts to the abdominal shape",
+    "High-quality elastic provides uniform compression",
+    "Hook-and-loop closure for customized fit",
+    "Lightweight, breathable material suitable for long-duration use"
+  ],
+  "sizes": ["S", "M", "L", "XL", "XXL"],
+  "inStock": true,
+  "bulkAvailable": true,
+  "rating": 4.8,
+  "certifications": ["ISO", "CE"],
+  "imageFolder": "abdominal-support-belt",
+  "description": "A high-quality, durable belt offering abdominal support to promote better posture and reduce strain.",
+
+  "shortDescription": "Premium abdominal support belt designed for post-operative recovery, posture correction, and daily abdominal stabilization.",
+
+  "longDescription": "The Abdominal Belt (MDL-101) is a premium-grade abdominal support solution engineered for individuals recovering from surgery, managing abdominal discomfort, or requiring additional core stability. Built with high-quality elastic material, it delivers uniform compression across the abdominal region, helping relieve strain and promote optimal healing. The belt’s contoured design adapts naturally to body shape, ensuring a snug yet comfortable fit suitable for everyday use. Ideal for postpartum mothers, hernia patients, and individuals with weakened abdominal muscles, this belt enhances body posture and reduces excessive motion during recovery. Its breathable construction prevents moisture buildup, making it suitable for long-duration wear at home, work, or in clinical environments.",
+
+  "keyFeatures": [
+    "Medical-grade elastic for consistent compression",
+    "Ergonomic contour ensures even pressure distribution",
+    "Soft, breathable fabric suitable for sensitive skin",
+    "Adjustable hook-and-loop closure for personalized comfort",
+    "Lightweight design reduces bulk under clothing",
+    "Can be worn throughout the day for support and pain relief"
+  ],
+
+  "medicalUseCases": [
+    "Post-operative abdominal recovery",
+    "Postpartum abdominal support",
+    "Umbilical or ventral hernia management",
+    "Weak abdominal muscles or poor posture",
+    "General abdominal discomfort or strain"
+  ],
+
+  "benefits": [
+    "Reduces abdominal strain and discomfort",
+    "Enhances posture by supporting the core",
+    "Improves mobility during recovery",
+    "Prevents overextension of abdominal muscles",
+    "Promotes natural healing through controlled compression"
+  ],
+
+  "technicalSpecifications": {
+    "materialComposition": "Elastic blended with breathable fibers",
+    "compressionLevel": "Medium-to-Firm",
+    "breathability": "High",
+    "washability": "Hand-wash recommended",
+    "weight": "Lightweight design under 200g",
+    "durabilityRating": "High (clinically tested)",
+    "flexibility": "Supports full range of daily activities",
+    "manufacturingStandard": "ISO & CE certified"
+  },
+
+  "safetyInformation": [
+    "Do not overtighten; may restrict breathing",
+    "Avoid use on open abdominal wounds",
+    "Consult a doctor if discomfort increases",
+    "Use under supervision during post-surgery stages"
+  ],
+
+  "whoShouldUse": [
+    "Patients recovering from abdominal surgery",
+    "Postpartum women requiring abdominal tightening",
+    "Individuals with hernia-related discomfort",
+    "People with weak abdominal muscles",
+    "Users needing posture correction"
+  ],
+
+  "usageGuidelines": [
+    "Wear for 2–6 hours daily or as advised by a clinician",
+    "Ensure the belt is snug but not overly tight",
+    "Remove during sleep unless instructed otherwise",
+    "Use consistently for best recovery outcomes"
+  ],
+
+  "careInstructions": [
+    "Hand wash using mild detergent",
+    "Air dry in shade; avoid direct heat",
+    "Do not bleach or iron",
+    "Store folded to maintain elasticity"
+  ],
+
+  "materialDetails": "Constructed from premium elastic fibers selected for durability, flexibility, and superior breathability. Designed to maintain shape even after extended use.",
+
+  "clinicianRecommendations": [
+    "Ideal for postoperative recovery and abdominal stabilization",
+    "Combine with mild physiotherapy exercises for faster healing",
+    "Monitor skin sensitivity during long-duration use"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 50,
+    "bulkAvailable": true,
+    "notes": [
+      "Bulk discounts available for hospitals and distributors",
+      "Custom size ratios can be arranged",
+      "Private labeling available for large orders"
+    ]
+  },
+
+  "searchKeywords": [
+    "abdominal belt",
+    "post surgery belt",
+    "hernia belt",
+    "postpartum belt",
+    "abdominal support",
+    "waist belt support",
+    "core support brace",
+    "compression belt"
+  ],
+
+  "tags": ["abdominal", "support", "belt", "post-surgery", "hernia", "postpartum"]
+},
+{
+  "id": 2,
+  "name": "Abdominal Universal",
+  "sku": "MDL-102",
+  "category": "Abdominal Support",
+  "material": "Elastic",
+  "moq": 50,
+  "price": 495,
+  "features": [
+    "Universal size fits most body types",
+    "Elastic material provides controlled compression",
+    "Hook-and-loop design for easy adjustment",
+    "Wide coverage ensures stable abdominal support"
+  ],
+  "sizes": ["Universal"],
+  "inStock": true,
+  "bulkAvailable": true,
+  "rating": 4.7,
+  "certifications": ["ISO", "CE"],
+  "imageFolder": "abdominal-universal",
+  "description": "Universal abdominal belt suitable for post-operative recovery, support, and improved posture.",
+
+  "shortDescription": "A universal abdominal belt offering adjustable compression for post-operative recovery, posture correction, and daily abdominal stability.",
+
+  "longDescription": "The Abdominal Universal (MDL-102) is a clinically designed abdominal support belt engineered for universal fit and broad clinical utility. This belt provides firm yet comfortable compression to the abdominal region, making it ideal for post-surgery recovery, postpartum support, hernia management, and core stabilization. Its extra-wide elastic design enhances abdominal containment and prevents excessive motion that may interfere with healing. The belt’s universal size is suitable for a wide range of waist circumferences, making it a preferred choice for hospitals, clinics, and rehabilitation centers. Its hook-and-loop closure system enables easy adjustment and ensures secure placement throughout the day. Featuring a breathable construction and soft-touch material, this belt is comfortable for long-duration use at work, home, or during light physical activity. Whether you are recovering from an abdominal procedure or seeking posture correction, the Abdominal Universal provides dependable, everyday support.",
+
+  "keyFeatures": [
+    "Universal size suitable for most adult users",
+    "Medical-grade elastic for firm abdominal compression",
+    "Wide panel design for higher abdominal coverage",
+    "Skin-friendly and breathable material for long wearing hours",
+    "High-tensile hook-and-loop closure for secure fit",
+    "Effective for post-surgical and postpartum recovery"
+  ],
+
+  "medicalUseCases": [
+    "General abdominal support",
+    "Post-operative abdominal surgery recovery",
+    "Postpartum abdominal muscle toning",
+    "Umbilical or ventral hernia maintenance",
+    "Core stabilization and posture correction"
+  ],
+
+  "benefits": [
+    "Provides firm and even compression across the abdominal region",
+    "Increases mobility by reducing discomfort and strain",
+    "Universal sizing eliminates guesswork for patients and caregivers",
+    "Promotes natural healing and supports weak abdominal muscles",
+    "Breathable fabric prevents skin irritation"
+  ],
+
+  "technicalSpecifications": {
+    "materialComposition": "High-density elastic with soft inner lining",
+    "compressionLevel": "Firm",
+    "breathability": "Moderate to High",
+    "washability": "Hand-wash",
+    "weight": "Lightweight",
+    "durabilityRating": "High",
+    "flexibility": "Moderate, suitable for daily movement",
+    "manufacturingStandard": "ISO & CE approved"
+  },
+
+  "safetyInformation": [
+    "Do not overtighten to avoid restricted breathing",
+    "Not recommended for open wounds",
+    "Follow clinician guidance for post-surgical use",
+    "Stop using if pain or discomfort increases"
+  ],
+
+  "whoShouldUse": [
+    "Patients recovering from abdominal surgery",
+    "Postpartum women needing abdominal firmness",
+    "Individuals with general abdominal discomfort",
+    "Patients with hernias requiring controlled compression",
+    "Users needing posture improvement"
+  ],
+
+  "usageGuidelines": [
+    "Start with light compression and increase gradually",
+    "Wear for 2–6 hours daily unless prescribed otherwise",
+    "Remove during sleep unless instructed by a clinician",
+    "Check skin condition periodically to avoid irritation"
+  ],
+
+  "careInstructions": [
+    "Hand wash using mild detergent",
+    "Air dry in shade",
+    "Do not iron or machine wash",
+    "Avoid wringing to maintain elasticity"
+  ],
+
+  "materialDetails": "Constructed from strong, stretchable elastic engineered for even compression and consistent performance. Soft inner lining ensures comfort throughout extended wear.",
+
+  "clinicianRecommendations": [
+    "Recommended for early-stage post-operative abdominal recovery",
+    "Useful in hernia management where surgery is not immediately required",
+    "Best combined with light physiotherapy exercises"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 50,
+    "bulkAvailable": true,
+    "notes": [
+      "Ideal for hospital bulk stocking due to universal size",
+      "Bulk discounts available for 200+ units",
+      "Custom branding available for distributors"
+    ]
+  },
+
+  "searchKeywords": [
+    "abdominal universal belt",
+    "postoperative abdominal belt",
+    "universal size abdominal support",
+    "hernia support belt",
+    "postpartum abdominal wrap",
+    "medical compression belt"
+  ],
+
+  "tags": ["abdominal", "universal", "support", "post-surgery", "postpartum"]
+},
+{
+  "id": 3,
+  "name": "Ad. Cervical Collar",
+  "sku": "MDL-103",
+  "category": "Cervical Support",
+  "material": "Foam",
+  "moq": 50,
+  "price": 300,
+  "features": [
+    "Soft high-density foam",
+    "Contoured chin support",
+    "Breathable stockinette covering",
+    "Hook-and-loop closure for easy adjustment"
+  ],
+  "sizes": ["S", "M", "L"],
+  "inStock": true,
+  "bulkAvailable": true,
+  "rating": 4.5,
+  "certifications": ["ISO", "CE"],
+  "imageFolder": "ad-cervical-collar",
+  "description": "Soft cervical collar offering mild neck support and posture correction.",
+
+  "shortDescription": "Soft foam cervical collar providing gentle neck immobilization, pain relief, and post-injury support.",
+
+  "longDescription": "The Ad. Cervical Collar (MDL-103) is a medically engineered neck support device designed to provide gentle immobilization and structural alignment for patients experiencing cervical pain, stiffness, or whiplash-related injuries. Manufactured using high-density orthopedic-grade foam, the collar ensures a balance of comfort and stability, reducing strain on cervical muscles and ligaments. The contoured chin support promotes a neutral neck posture, helping prevent further injury while encouraging proper healing. Its skin-friendly stockinette fabric allows adequate airflow, preventing heat buildup during prolonged use. Ideal for early-stage cervical recovery, spondylosis management, and post-trauma stabilization, this collar is frequently recommended by clinicians for controlled motion support. With its lightweight design and easy hook-and-loop fastening, the collar offers quick adjustability, making it suitable for both clinical and home environments.",
+
+  "keyFeatures": [
+    "High-density foam ensures comfortable yet effective neck support",
+    "Contoured design promotes neutral cervical alignment",
+    "Breathable stockinette fabric for extended wear",
+    "Lightweight and skin-friendly construction",
+    "Easy application with adjustable hook-and-loop closure",
+    "Ideal for mild to moderate cervical injuries"
+  ],
+
+  "medicalUseCases": [
+    "Mild cervical spondylosis",
+    "Whiplash and soft-tissue neck injuries",
+    "Neck strain due to poor posture",
+    "Cervical muscle spasm relief",
+    "Support during early cervical rehabilitation"
+  ],
+
+  "benefits": [
+    "Reduces cervical strain and muscle fatigue",
+    "Promotes controlled and safe neck movement",
+    "Enhances recovery by maintaining neutral alignment",
+    "Provides immediate comfort for neck stiffness",
+    "Suitable for both clinical and home-based care"
+  ],
+
+  "technicalSpecifications": {
+    "materialComposition": "High-density polyurethane foam with cotton stockinette",
+    "compressionLevel": "Mild",
+    "breathability": "Excellent",
+    "washability": "Hand-washable outer cover",
+    "weight": "Ultra-lightweight",
+    "durabilityRating": "Moderate",
+    "flexibility": "Soft and adaptive foam structure",
+    "manufacturingStandard": "ISO & CE certified"
+  },
+
+  "safetyInformation": [
+    "Not recommended for severe cervical trauma",
+    "Avoid excessive use without clinician supervision",
+    "Remove if skin irritation occurs",
+    "Do not use while sleeping unless advised"
+  ],
+
+  "whoShouldUse": [
+    "Patients with mild cervical pain or strain",
+    "Individuals recovering from whiplash injury",
+    "People with posture-induced neck stiffness",
+    "Patients undergoing early cervical rehabilitation"
+  ],
+
+  "usageGuidelines": [
+    "Wear for 2–4 hours at a time unless prescribed otherwise",
+    "Ensure chin rests comfortably on the collar contour",
+    "Do not overtighten — allow natural breathing",
+    "Follow clinician advice for daily usage duration"
+  ],
+
+  "careInstructions": [
+    "Remove stockinette cover before washing",
+    "Hand wash using mild detergent",
+    "Air dry completely before reuse",
+    "Avoid direct heat exposure"
+  ],
+
+  "materialDetails": "Crafted from soft orthopedic-grade foam offering reliable cushioning and mild immobilization. Breathable cotton stockinette ensures skin comfort during prolonged wear.",
+
+  "clinicianRecommendations": [
+    "Suitable for early-phase cervical injury management",
+    "Helps in reducing pain during physiotherapy sessions",
+    "Should be used temporarily until pain and stiffness subside"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 50,
+    "bulkAvailable": true,
+    "notes": [
+      "Recommended for hospitals and emergency care units",
+      "Available in multiple sizes for varied patient needs",
+      "Bulk pricing available for 150+ units"
+    ]
+  },
+
+  "searchKeywords": [
+    "cervical collar",
+    "soft neck collar",
+    "whiplash neck support",
+    "neck brace foam",
+    "cervical pain support",
+    "neck immobilizer"
+  ],
+
+  "tags": ["cervical", "neck support", "foam collar", "whiplash", "orthopedic"]
+},
+{
+  "id": 4,
+  "name": "Ankle Binder",
+  "sku": "MDL-045",
+  "category": "Ankle & Foot Support",
+  "price": 60,
+  "originalPrice": 389,
+  "sizes": ["Universal", "S", "M", "L", "XL"],
+  "rating": 4.8,
+  "moq": 100,
+  "material": "Cotton Elastic",
+  "inStock": true,
+  "bulkAvailable": true,
+  "certifications": ["ISO Certified", "CE Certified"],
+  "imageFolder": "ankle-binder",
+
+  "shortDescription": "High-compression ankle binder with figure-8 design for superior joint stability, pain relief, and injury prevention.",
+
+  "longDescription": "The Ankle Binder (MDL-045) is a medically engineered ankle support designed for athletes, active individuals, and patients recovering from sprains, ligament injuries, or chronic ankle instability. Made from premium cotton-elastic woven fibers, it delivers a perfect balance of compression, flexibility, and breathability. The anatomical figure-8 construction wraps securely around the ankle joint, enhancing proprioception while controlling excessive inversion and eversion movements. The binder helps reduce swelling, improves joint stability, and promotes faster recovery after injury. Its non-slip, skin-friendly fabric ensures durability and comfort, making it suitable for long-duration use during sports, physiotherapy, and daily activities. Widely recommended by physiotherapists for Stage-1 and Stage-2 ankle rehabilitation, the binder is ideal for managing mild to moderate sprains and preventing re-injury.",
+
+  "keyFeatures": [
+    "Figure-8 anatomical design for enhanced joint stability",
+    "Provides firm, controlled compression to reduce swelling",
+    "Breathable cotton-elastic material prevents sweat buildup",
+    "Lightweight, flexible structure suitable for active use",
+    "Universal and multi-size options available",
+    "Easy wrap-around design for quick application"
+  ],
+
+  "medicalUseCases": [
+    "Grade I and II ankle sprains",
+    "Ligament strain or mild tears",
+    "Chronic ankle instability",
+    "Post-cast rehabilitation",
+    "Sports-induced swelling or tendon strain",
+    "Support during physiotherapy sessions"
+  ],
+
+  "benefits": [
+    "Improves ankle joint stability during movement",
+    "Speeds recovery by enhancing circulation and reducing edema",
+    "Prevents further injury during walking, exercise, or sports",
+    "Comfortable for all-day wear",
+    "Reduces pain associated with ligament strain"
+  ],
+
+  "technicalSpecifications": {
+    "materialComposition": "65% Cotton, 25% Elastic Fiber, 10% Nylon",
+    "compressionLevel": "Moderate to High",
+    "stretchability": "4-way stretch",
+    "breathability": "High airflow knit",
+    "washability": "Hand-wash recommended",
+    "durabilityRating": "High",
+    "weight": "Lightweight (approx. 80g)",
+    "constructionType": "Figure-8 compression wrap"
+  },
+
+  "safetyInformation": [
+    "Do not overtighten; may restrict blood flow",
+    "Remove immediately if numbness or discoloration occurs",
+    "Not suitable for severe ligament ruptures",
+    "Consult a physician if pain persists"
+  ],
+
+  "whoShouldUse": [
+    "Athletes recovering from ankle injuries",
+    "Individuals with weak or unstable ankles",
+    "Patients with sprains or ligament strain",
+    "People requiring added stability during walking or sports",
+    "Physiotherapy and orthopedic patients"
+  ],
+
+  "usageGuidelines": [
+    "Wear during activity for maximum support",
+    "Do not wear during sleep unless advised",
+    "Use 2–4 hours per session initially",
+    "Loosen the wrap periodically to allow circulation"
+  ],
+
+  "careInstructions": [
+    "Hand-wash in cold water with mild detergent",
+    "Air dry only; avoid direct sunlight",
+    "Do not iron or wring",
+    "Store flat to maintain elasticity"
+  ],
+
+  "materialDetails": "Constructed from premium cotton-elastic fibers providing optimal compression while ensuring skin comfort and moisture control during extended use.",
+
+  "clinicianRecommendations": [
+    "Highly suitable for early-stage ankle rehabilitation",
+    "Use during physical activity to prevent re-injury",
+    "Combine with ice therapy during first 48 hours post-injury"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 100,
+    "bulkAvailable": true,
+    "notes": [
+      "Ideal for sports clubs, physiotherapy centers, and hospitals",
+      "Bulk pricing available for 200+ units",
+      "Multiple sizes make it suitable for large-volume orders"
+    ]
+  },
+
+  "searchKeywords": [
+    "ankle binder",
+    "ankle support wrap",
+    "figure 8 ankle band",
+    "ankle pain relief",
+    "ligament injury support",
+    "athletic ankle brace",
+    "compression ankle support"
+  ],
+
+  "tags": [
+    "ankle support",
+    "compression wrap",
+    "sports injury",
+    "physiotherapy",
+    "orthopedic"
+  ]
+}, 
+{
+  "id": 5,
+  "name": "Ankle Brace Dryfit",
+  "sku": "MDL-121",
+  "category": "Ankle & Foot Support",
+  "price": 150,
+  "originalPrice": 949,
+  "sizes": ["S", "M", "L", "XL"],
+  "rating": 4.9,
+  "moq": 50,
+  "material": "Mesh fabric",
+  "inStock": true,
+  "bulkAvailable": false,
+  "certifications": ["FDA Approved"],
+  "imageFolder": "ankle-brace-dryfit",
+
+  "shortDescription": "Premium Dryfit ankle brace engineered for superior breathability, enhanced compression, and all-day comfort for sports and medical rehabilitation.",
+
+  "longDescription": "The Ankle Brace Dryfit (MDL-121) is a next-generation support brace crafted for athletes, physiotherapy patients, and individuals needing long-duration ankle stabilization. Manufactured with advanced Dryfit breathable mesh technology, this brace efficiently wicks moisture away from the skin, keeping the ankle cool and dry even during high-intensity activity. Its ergonomic, sleeve-style construction provides uniform compression to improve circulation, reduce swelling, and enhance proprioception. The brace stabilizes the ankle joint without restricting movement, making it ideal for running, gym workouts, badminton, football, and post-injury rehabilitation. Soft internal padding ensures reduced irritation, while reinforced elastic zones offer targeted support to the Achilles tendon and lateral ligaments. Widely used in clinical settings, it is particularly beneficial for chronic sprains, tendonitis, and ligament weakness. This premium brace offers the perfect combination of comfort, durability, and medical-grade support.",
+
+  "keyFeatures": [
+    "Dryfit moisture-wicking fabric for sweat-free comfort",
+    "One-piece pull-on design for quick and secure fit",
+    "Targeted compression zones for enhanced blood flow",
+    "Ultra-breathable mesh reduces heat buildup",
+    "Reinforced elastic areas support ligaments and tendons",
+    "Lightweight and flexible structure suitable for sports"
+  ],
+
+  "medicalUseCases": [
+    "Achilles tendonitis",
+    "Mild to moderate ankle sprains",
+    "Chronic ligament instability",
+    "Post-cast recovery and physiotherapy",
+    "Sports-induced swelling or overuse injuries"
+  ],
+
+  "benefits": [
+    "Maintains ankle stability during activity",
+    "Reduces swelling and inflammation",
+    "Promotes faster healing and rehabilitation",
+    "Prevents re-injury during movement",
+    "Superior comfort for long-duration wear"
+  ],
+
+  "technicalSpecifications": {
+    "materialComposition": "Dryfit mesh fabric with elastic compression zones",
+    "compressionLevel": "Moderate",
+    "moistureWicking": "High-performance quick-dry fabric",
+    "breathability": "Ultra-high airflow mesh",
+    "stretchability": "4-way dynamic stretch",
+    "weight": "Approx. 70g",
+    "designType": "Pull-on sleeve",
+    "washability": "Machine wash cold; air dry"
+  },
+
+  "safetyInformation": [
+    "Ensure correct sizing to avoid excessive compression",
+    "Not recommended for severe ligament rupture",
+    "Remove immediately if experiencing numbness",
+    "Consult a clinician if pain persists"
+  ],
+
+  "whoShouldUse": [
+    "Athletes engaging in high-impact sports",
+    "People with chronic ankle weakness",
+    "Patients recovering from sprains or tendonitis",
+    "Gym-goers needing extra stability",
+    "Individuals who stand for long hours"
+  ],
+
+  "usageGuidelines": [
+    "Ideal for 3–6 hours of daily use",
+    "Can be worn inside most footwear",
+    "Use during sports for maximum protection",
+    "Not recommended for nighttime use unless prescribed"
+  ],
+
+  "careInstructions": [
+    "Wash with mild detergent only",
+    "Do not iron or tumble dry",
+    "Air dry in shade to maintain elasticity",
+    "Store in a cool, dry place"
+  ],
+
+  "materialDetails": "Constructed using high-grade Dryfit mesh fabric engineered to wick sweat rapidly and deliver stability without compromising comfort.",
+
+  "clinicianRecommendations": [
+    "Recommended for tendonitis and chronic sprains",
+    "Ideal support during physiotherapy exercises",
+    "Use with contrast therapy for best results"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 50,
+    "bulkAvailable": false,
+    "notes": [
+      "Suitable for retail and sports rehabilitation centers",
+      "Bulk customization not available",
+      "Limited stock sizes due to high demand"
+    ]
+  },
+
+  "searchKeywords": [
+    "dryfit ankle brace",
+    "ankle compression sleeve",
+    "sports ankle support",
+    "breathable ankle guard",
+    "achilles tendon support",
+    "ankle stabilizer"
+  ],
+
+  "tags": [
+    "sports support",
+    "breathable brace",
+    "compression sleeve",
+    "ankle guard",
+    "rehabilitation"
+  ]
+},
+{
+  "id": 6,
+  "name": "Ankle Brace Neo",
+  "sku": "MDL-074",
+  "category": "Ankle & Foot Support",
+  "price": 130,
+  "originalPrice": 899,
+  "sizes": ["Universal"],
+  "rating": 4.6,
+  "moq": 50,
+  "material": "Neoprene",
+  "inStock": true,
+  "bulkAvailable": true,
+  "certifications": ["ISO Certified"],
+  "imageFolder": "ankle-brace-neo",
+
+  "shortDescription": "Neoprene-based ankle brace offering therapeutic warmth, deep compression, and reliable stabilization for sprains, ligament injuries, and chronic ankle weakness.",
+
+  "longDescription": "The Ankle Brace Neo (MDL-074) is engineered with premium-grade neoprene, providing superior warmth, support, and compression to the ankle joint. Its anatomical design contours naturally to the ankle, delivering targeted stability without restricting mobility. Ideal for athletes, physiotherapy patients, and individuals recovering from ankle injuries, the brace enhances proprioception and reduces the risk of re-injury. The four-way stretch neoprene ensures uniform compression while maintaining maximum flexibility. Its heat-retention capability promotes blood circulation, reducing pain, stiffness, and inflammation. The wrap-around system with reinforced straps allows customizable pressure, making it suitable for mild to moderate sprains, tendonitis, ligament strain, and chronic instability. Clinical practitioners frequently recommend this model due to its durable construction, all-day comfort, and reliable joint reinforcement. Whether used during sports, recovery, or daily activities, the Ankle Brace Neo provides dependable and therapeutic ankle protection.",
+
+  "keyFeatures": [
+    "High-quality neoprene for therapeutic warmth",
+    "Four-way stretch design for optimal compression",
+    "Anatomical shape fits natural ankle contour",
+    "Adjustable wrap-around straps for customizable support",
+    "Enhances stability during movement",
+    "Suitable for both medical and sports use"
+  ],
+
+  "medicalUseCases": [
+    "Grade 1 and 2 ankle sprains",
+    "Achilles tendonitis",
+    "Chronic ligament instability",
+    "Swelling due to overuse",
+    "Post-cast rehabilitation"
+  ],
+
+  "benefits": [
+    "Improves ankle stability and joint alignment",
+    "Reduces pain and inflammation through heat therapy",
+    "Supports tendons and ligaments during motion",
+    "Prevents further injury during activity",
+    "Comfortable for long-duration use"
+  ],
+
+  "technicalSpecifications": {
+    "materialComposition": "100% high-density neoprene with nylon lining",
+    "compressionLevel": "Moderate to firm",
+    "heatRetention": "High therapeutic warmth retention",
+    "breathability": "Moderate (neoprene structure)",
+    "stretchability": "4-way stretch",
+    "weight": "Approx. 95g",
+    "designType": "Wrap-around adjustable brace",
+    "washability": "Hand wash only; air dry"
+  },
+
+  "safetyInformation": [
+    "Not advisable for severe ligament tears without clinician approval",
+    "Remove if excessive heat or numbness occurs",
+    "Do not wear on open wounds or skin infections",
+    "Ensure correct positioning to avoid pressure points"
+  ],
+
+  "whoShouldUse": [
+    "Athletes with recurring ankle strain",
+    "Patients recovering from ankle sprains or tendonitis",
+    "Individuals with chronic instability",
+    "People engaged in high-impact sports or running",
+    "Users needing lightweight daily support"
+  ],
+
+  "usageGuidelines": [
+    "Wear for 3–6 hours at a time depending on comfort",
+    "Suitable for use during sports and exercise",
+    "Not recommended during sleep unless prescribed",
+    "Ensure snug but not overly tight fitting"
+  ],
+
+  "careInstructions": [
+    "Hand wash with mild soap only",
+    "Do not bleach or iron",
+    "Air dry in shade to maintain elasticity",
+    "Store flat or rolled, not folded, to avoid creasing"
+  ],
+
+  "materialDetails": "Made from medical-grade neoprene known for its heat-retention properties and supportive, flexible structure ideal for joint stabilization.",
+
+  "clinicianRecommendations": [
+    "Recommended for chronic ankle weakness and recurring sprains",
+    "Supports joint movement during physiotherapy exercises",
+    "Use during sports to prevent re-injury"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 50,
+    "bulkAvailable": true,
+    "notes": [
+      "Ideal for sports stores, clinics, and rehab centers",
+      "Custom logo printing available for large orders",
+      "Best-selling neoprene brace category"
+    ]
+  },
+
+  "searchKeywords": [
+    "neoprene ankle brace",
+    "ankle support neoprene",
+    "ankle compression wrap",
+    "ligament injury support",
+    "ankle stabilizer",
+    "heat therapy brace"
+  ],
+
+  "tags": [
+    "neoprene support",
+    "ankle stability",
+    "compression brace",
+    "sports injury",
+    "rehabilitation"
+  ]
+},
+{
+  "id": 7,
+  "name": "Ankle Brace Plastic",
+  "sku": "MDL-031",
+  "category": "Ankle & Foot Support",
+  "price": 160,
+  "originalPrice": 1240,
+  "sizes": ["Universal"],
+  "rating": 4.7,
+  "moq": 25,
+  "material": "Medical Grade Silicone + Rigid Plastic Frame",
+  "inStock": true,
+  "bulkAvailable": true,
+  "certifications": ["CE Certified"],
+  "imageFolder": "ankle-brace-plastic",
+
+  "shortDescription": "Rigid exoskeleton ankle brace designed to deliver maximum lateral stability, protect ligaments, and support post-injury rehabilitation with medical-grade precision.",
+
+  "longDescription": "The Ankle Brace Plastic (MDL-031) is a high-stability orthopedic device built with a rigid plastic exoskeleton to protect and immobilize the ankle during recovery. Ideal for moderate to severe sprains, ligament injuries, and unstable ankle joints, this brace delivers exceptional side-to-side support while still allowing controlled forward flexion. The internal foam padding conforms comfortably to the ankle and reduces pressure points, ensuring long-duration wear without discomfort. Adjustable Velcro straps allow a fully customizable fit, making it suitable for clinical rehabilitation, sports injuries, and post-operative care. The brace prevents inversion and eversion movements, the primary cause of ligament damage, making it one of the most effective supports for preventing re-injury. Trusted by physiotherapists and sports medicine specialists, this rigid brace is essential for users who require high-level protection during recovery or high-impact activities.",
+
+  "keyFeatures": [
+    "Rigid exoskeleton for maximum ankle stabilization",
+    "Prevents inversion and eversion movements",
+    "Soft inner foam for comfort and reduced friction",
+    "Wide adjustable straps for secure fit",
+    "High-durability plastic frame withstands repeated use",
+    "Suitable for moderate to severe injuries"
+  ],
+
+  "medicalUseCases": [
+    "Moderate to severe ankle sprains",
+    "Lateral or medial ligament tears",
+    "Post-operative ankle stabilization",
+    "Chronic instability requiring rigid support",
+    "High-risk sports injury prevention"
+  ],
+
+  "benefits": [
+    "Provides superior structural stability",
+    "Reduces risk of ligament damage and re-injury",
+    "Supports healing by restricting harmful ankle movements",
+    "Improves confidence during mobility",
+    "Suitable for early, mid, and late rehab stages"
+  ],
+
+  "technicalSpecifications": {
+    "frameMaterial": "Rigid orthopedic-grade plastic",
+    "padding": "High-density medical foam",
+    "closureType": "Dual Velcro strap system",
+    "supportLevel": "High",
+    "weight": "Approx. 180g",
+    "motionControl": "Full inversion/eversion restriction",
+    "breathability": "Moderate",
+    "washability": "Foam padding hand-wash only"
+  },
+
+  "safetyInformation": [
+    "Do not overtighten straps to avoid reduced blood flow",
+    "Not recommended for acute swelling unless advised by clinician",
+    "Check skin regularly for irritation during long use",
+    "Avoid use barefoot; recommended with socks"
+  ],
+
+  "whoShouldUse": [
+    "Patients recovering from Grade 2/3 sprains",
+    "Individuals with chronic ankle instability",
+    "Athletes requiring rigid protection",
+    "Users returning to sports post-injury",
+    "People with weak lateral ligaments"
+  ],
+
+  "usageGuidelines": [
+    "Wear for 2–6 hours depending on clinical recommendation",
+    "Ideal for walking, light work, and controlled movement",
+    "Not recommended during sleep",
+    "Use with proper footwear for maximum support"
+  ],
+
+  "careInstructions": [
+    "Clean foam padding with mild soap, air dry only",
+    "Do not immerse plastic frame in hot water",
+    "Store away from direct sunlight",
+    "Keep straps lint-free for long-lasting adhesion"
+  ],
+
+  "materialDetails": "Constructed with a rigid orthopedic-grade plastic frame to control harmful ankle movements, paired with soft, breathable medical foam padding for comfort.",
+
+  "clinicianRecommendations": [
+    "Highly recommended for ligament stabilization",
+    "Ideal for controlled mobility after injury",
+    "Use with physiotherapy for best functional recovery"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 25,
+    "bulkAvailable": true,
+    "notes": [
+      "Preferred by sports clinics and orthopedic centers",
+      "Private labeling available for bulk orders",
+      "High demand in rehabilitation facilities"
+    ]
+  },
+
+  "searchKeywords": [
+    "rigid ankle brace",
+    "plastic ankle support",
+    "ligament injury brace",
+    "ankle immobilizer",
+    "orthopedic ankle protection",
+    "ankle exoskeleton"
+  ],
+
+  "tags": [
+    "rigid brace",
+    "ankle immobilizer",
+    "sports injury support",
+    "orthopedic support",
+    "protection brace"
+  ]
+},
+{
+  "id": 8,
+  "name": "Ankle Traction Brace",
+  "sku": "MDL-126",
+  "category": "Ankle & Foot Support",
+  "price": 120,
+  "originalPrice": 399,
+  "sizes": ["Universal"],
+  "rating": 4.4,
+  "moq": 50,
+  "material": "Cotton Elastic",
+  "inStock": false,
+  "bulkAvailable": true,
+  "certifications": ["ISO Certified"],
+  "imageFolder": "ankle-traction-brace",
+
+  "shortDescription": "Specialized ankle traction brace designed to provide gentle stretching, reduce stiffness, and relieve pain associated with ankle contractures and post-injury recovery.",
+
+  "longDescription": "The Ankle Traction Brace (MDL-126) is a therapeutic aid specifically developed to deliver controlled traction to the ankle joint, helping reduce muscle tightness, enhance flexibility, and improve joint mobility. Designed with soft, breathable cotton-elastic materials, this brace ensures superior comfort while enabling effective therapeutic stretching. The integrated traction system supports gradual lengthening of muscles and tendons, making it ideal for rehabilitation post-fracture, tendon injuries, or immobilization. Reinforced adjustable straps allow users to regulate traction intensity with precision. The inner lining reduces skin irritation and ensures secure positioning during physiotherapy sessions. Clinically used for restoring dorsiflexion and improving range of motion, this traction brace supports early-stage rehabilitation as well as long-term mobility recovery. Lightweight and simple to apply, it benefits both clinical environments and home physiotherapy routines.",
+
+  "keyFeatures": [
+    "Gentle traction mechanism for controlled stretching",
+    "Soft cotton-elastic construction for comfort",
+    "Adjustable tension straps for customized traction",
+    "Universal size suitable for either foot",
+    "Lightweight design for easy application",
+    "Helps restore range of motion post-injury"
+  ],
+
+  "medicalUseCases": [
+    "Reduced ankle mobility / joint stiffness",
+    "Post-fracture rehabilitation",
+    "Achilles tendon rehabilitation",
+    "Ankle contracture due to prolonged immobilization",
+    "Physiotherapy for improving dorsiflexion"
+  ],
+
+  "benefits": [
+    "Reduces tightness in muscles and tendons",
+    "Improves joint flexibility and mobility",
+    "Supports controlled therapeutic stretching",
+    "Aids in faster recovery from immobilization",
+    "Allows safe home-based physiotherapy"
+  ],
+
+  "technicalSpecifications": {
+    "tractionMechanism": "Manual strap-based traction system",
+    "materialComposition": "Cotton elastic blend with reinforced stitching",
+    "padding": "Soft anti-irritation inner layer",
+    "adjustability": "Multi-point strap system",
+    "supportLevel": "Mild to moderate traction",
+    "weight": "Approx. 115g",
+    "washability": "Hand wash recommended"
+  },
+
+  "safetyInformation": [
+    "Do not apply excessive traction to avoid strain",
+    "Stop use immediately if sharp pain occurs",
+    "Not recommended for acute fractures or severe inflammation",
+    "Consult a clinician for first-time usage"
+  ],
+
+  "whoShouldUse": [
+    "Patients recovering from ankle fractures",
+    "Individuals with stiff ankle joints",
+    "Users undergoing physiotherapy",
+    "People with muscle shortening due to inactivity",
+    "Athletes recovering from tendon injuries"
+  ],
+
+  "usageGuidelines": [
+    "Use for 10–20 minutes per physiotherapy session",
+    "Apply traction slowly and gradually",
+    "Recommended under the supervision of a therapist for initial sessions",
+    "Do not exceed comfort level while stretching"
+  ],
+
+  "careInstructions": [
+    "Hand wash using mild soap",
+    "Air dry completely before next use",
+    "Do not wring or use harsh chemicals",
+    "Store in a moisture-free environment"
+  ],
+
+  "materialDetails": "Made with premium cotton-elastic fabric offering a soft, breathable experience while facilitating traction-based rehabilitation therapy.",
+
+  "clinicianRecommendations": [
+    "Ideal for early-stage mobilization after prolonged ankle immobility",
+    "Effective for improving dorsiflexion when combined with stretching exercises",
+    "Recommended for supervised physiotherapy programs"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 50,
+    "bulkAvailable": true,
+    "notes": [
+      "Popular in physiotherapy clinics and rehabilitation centers",
+      "Bulk orders can include size tags and private labeling",
+      "High clinical usage for post-injury therapy"
+    ]
+  },
+
+  "searchKeywords": [
+    "ankle traction",
+    "ankle mobility brace",
+    "rehabilitation traction belt",
+    "dorsiflexion stretcher",
+    "physiotherapy ankle support",
+    "ankle stretching strap"
+  ],
+
+  "tags": [
+    "ankle traction",
+    "physiotherapy tool",
+    "rehab support",
+    "joint mobility",
+    "traction brace"
+  ]
+},
+{
+  "id": 9,
+  "name": "Anklet With Ankle Binder",
+  "sku": "MDL-044",
+  "category": "Ankle & Foot Support",
+  "price": 90,
+  "originalPrice": 485,
+  "sizes": ["S", "M", "L", "XL"],
+  "rating": 4.8,
+  "moq": 100,
+  "material": "Cotton Elastic",
+  "inStock": true,
+  "bulkAvailable": true,
+  "certifications": ["FDA Approved"],
+  "imageFolder": "anklet-with-ankle-binder",
+
+  "shortDescription": "Dual-action anklet + binder providing compression, stability, and pain relief for sprains, ligament injuries, and everyday ankle support needs.",
+
+  "longDescription": "The Anklet With Ankle Binder (MDL-044) combines the benefits of a snug compression anklet with a reinforced ankle binder to deliver superior stability and targeted support. Designed for individuals seeking enhanced ankle protection during daily activities or sports, this product offers a unique 2-in-1 structure that gently compresses the ankle while providing additional grip around the joint. The cotton-elastic material ensures a soft, breathable, and irritation-free experience, making it suitable for extended use throughout the day. The binder strap enhances joint alignment and prevents unwanted twisting or rolling—common causes of ankle injuries. Ideal for athletes, fitness enthusiasts, and individuals recovering from sprains, tendon strain, or chronic ankle weakness, this brace improves circulation, reduces swelling, and enhances joint stability. Widely used in physiotherapy clinics, the anklet-with-binder design offers the perfect balance of comfort, support, and mobility.",
+
+  "keyFeatures": [
+    "Dual-compression design for enhanced joint stability",
+    "Elastic anklet sleeve with adjustable binder strap",
+    "Soft, breathable cotton-elastic fabric",
+    "Supports tendons, ligaments, and ankle muscles",
+    "Suitable for both injury recovery and daily wear",
+    "Lightweight and flexible for unrestricted movement"
+  ],
+
+  "medicalUseCases": [
+    "Mild to moderate ankle sprains",
+    "Ligament strain and instability",
+    "Achilles tendon discomfort",
+    "Swelling and inflammation post-activity",
+    "Chronic ankle weakness"
+  ],
+
+  "benefits": [
+    "Provides uniform compression and pain relief",
+    "Improves ankle stability during physical activity",
+    "Enhances blood circulation to promote healing",
+    "Reduces swelling and inflammation",
+    "Prevents re-injury during movement"
+  ],
+
+  "technicalSpecifications": {
+    "materialComposition": "High-stretch cotton-elastic fabric with reinforced binding strap",
+    "compressionLevel": "Moderate",
+    "breathability": "High due to porous knit design",
+    "stretchability": "4-way stretch elastic",
+    "weight": "Approx. 70g",
+    "designType": "Pull-on sleeve with adjustable strap",
+    "washability": "Hand or machine wash; air dry"
+  },
+
+  "safetyInformation": [
+    "Do not overtighten the binder strap",
+    "Remove immediately if numbness or tingling occurs",
+    "Not recommended for severe ligament tears",
+    "Avoid usage over open wounds"
+  ],
+
+  "whoShouldUse": [
+    "Athletes needing extra ankle reinforcement",
+    "Individuals recovering from ankle sprains",
+    "People with chronic instability or weak ligaments",
+    "Gym-goers performing high-impact movements",
+    "Workers who stand for long hours"
+  ],
+
+  "usageGuidelines": [
+    "Wear for 3–6 hours based on comfort",
+    "Suitable for sports, walking, and regular daily activities",
+    "Not recommended for nighttime use",
+    "Ensure correct size for optimal compression"
+  ],
+
+  "careInstructions": [
+    "Hand wash or mild machine wash only",
+    "Do not bleach or iron",
+    "Air dry in shade",
+    "Store flat to maintain elasticity"
+  ],
+
+  "materialDetails": "Made with premium-grade cotton-elastic fabric that provides high breathability, skin comfort, and reliable compression for injury prevention and recovery.",
+
+  "clinicianRecommendations": [
+    "Excellent for mild ligament injuries and chronic instability",
+    "Recommended for patients undergoing strengthening therapy",
+    "Ideal for preventing ankle rolling during sports"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 100,
+    "bulkAvailable": true,
+    "notes": [
+      "High-volume demand in sports shops and clinics",
+      "Bulk logo printing available upon request",
+      "Most economical dual-action support product"
+    ]
+  },
+
+  "searchKeywords": [
+    "anklet with ankle binder",
+    "dual ankle support",
+    "ankle compression sleeve",
+    "ligament support ankle",
+    "ankle band strap",
+    "sports ankle protector"
+  ],
+
+  "tags": [
+    "ankle binder",
+    "compression anklet",
+    "sports ankle support",
+    "injury recovery",
+    "ankle stability"
+  ]
+},
+{
+  "id": 10,
+  "name": "Ankle With Ankle Binder 3D",
+  "sku": "MDL-075",
+  "category": "Ankle & Foot Support",
+  "price": 150,
+  "originalPrice": 599,
+  "sizes": ["S", "M", "L", "XL"],
+  "rating": 4.9,
+  "moq": 50,
+  "material": "Neoprene",
+  "inStock": true,
+  "bulkAvailable": true,
+  "certifications": ["CE Certified"],
+  "imageFolder": "ankle-with-ankle-binder-3d",
+
+  "shortDescription": "Advanced 3D-knitted ankle support with integrated binder for targeted compression, stability, and injury recovery.",
+
+  "longDescription": "The Ankle With Ankle Binder 3D (MDL-075) is engineered using next-generation 3D knitting technology to deliver superior anatomical fit, targeted compression, and long-lasting comfort. Designed for professional athletes, physiotherapy patients, and individuals recovering from ankle-related injuries, this brace combines a seamless compression sleeve with an adjustable binder strap for enhanced lateral and medial stability. The breathable 3D-knit fabric adapts to your ankle contours, offering gradient compression that boosts blood circulation, reduces swelling, and promotes rapid recovery. The binder strap reinforces weak ligaments and prevents unwanted ankle inversion, making it ideal for intensive workouts, running, and post-injury rehabilitation. The neoprene-infused fabric provides therapeutic warmth to soothe pain in conditions like tendonitis, chronic ankle instability, and sprains. Trusted by orthopedic clinicians, this 3D ankle support ensures long-wear comfort, natural mobility, and reliable joint protection throughout daily activities.",
+
+  "keyFeatures": [
+    "3D knitted sleeve for anatomical fit",
+    "Targeted pressure zones for enhanced healing",
+    "Reinforced binder strap for stability",
+    "Seamless and non-irritating design",
+    "Breathable and moisture-wicking fabric",
+    "Ideal for sports and rehabilitation use"
+  ],
+
+  "medicalUseCases": [
+    "Grade 1 and 2 ankle sprains",
+    "Tendonitis and ligament strain",
+    "Chronic ankle instability",
+    "Mild swelling and inflammation",
+    "Post-cast rehabilitation"
+  ],
+
+  "benefits": [
+    "Boosts blood circulation for faster recovery",
+    "Reduces swelling and muscle fatigue",
+    "Improves balance and ankle control",
+    "Provides all-day support without restricting movement",
+    "Prevents re-injury by stabilizing the joint"
+  ],
+
+  "technicalSpecifications": {
+    "materialComposition": "3D-knit fabric with neoprene reinforcement",
+    "compressionLevel": "Moderate to high",
+    "breathability": "Advanced airflow knitting",
+    "stretchability": "4-way dynamic stretch",
+    "weight": "Approx. 85g",
+    "designType": "Seamless 3D sleeve + adjustable binder",
+    "washability": "Hand wash recommended"
+  },
+
+  "safetyInformation": [
+    "Avoid overtightening the strap",
+    "Remove if excessive numbness occurs",
+    "Not meant for severe ligament tears",
+    "Do not use on open wounds"
+  ],
+
+  "whoShouldUse": [
+    "Athletes needing high-performance ankle protection",
+    "Individuals recovering from sprains or tendon strain",
+    "People with chronic ankle instability",
+    "Gym-goers, runners, and sports professionals",
+    "Post-surgery patients requiring controlled compression"
+  ],
+
+  "usageGuidelines": [
+    "Wear for 3–8 hours daily depending on comfort",
+    "Suitable for walking, sports, and therapy sessions",
+    "Avoid wearing during sleep",
+    "Ensure sleeve fits tightly but comfortably"
+  ],
+
+  "careInstructions": [
+    "Hand wash with mild detergent",
+    "Do not bleach or wring",
+    "Air dry only",
+    "Store flat to maintain 3D structure"
+  ],
+
+  "materialDetails": "Constructed with high-stretch 3D-knitted fabric combined with neoprene for dynamic compression, impact absorption, and long-term durability.",
+
+  "clinicianRecommendations": [
+    "Highly recommended for athletes with recurring ankle injuries",
+    "Useful for post-sprain rehabilitation",
+    "Ideal for patients needing controlled yet flexible support"
+  ],
+
+  "bulkOrderingNotes": {
+    "moq": 50,
+    "bulkAvailable": true,
+    "notes": [
+      "Top seller for sports academies and physiotherapy centers",
+      "Bulk OEM customization available",
+      "Fast-moving premium-grade ankle support"
+    ]
+  },
+
+  "searchKeywords": [
+    "3D ankle support",
+    "ankle binder sleeve",
+    "sports ankle brace",
+    "compression ankle protector",
+    "ligament support ankle",
+    "neoprene ankle binder"
+  ],
+
+  "tags": [
+    "ankle support",
+    "3D knitted",
+    "sports brace",
+    "rehabilitation",
+    "ankle compression"
+  ]
+},
