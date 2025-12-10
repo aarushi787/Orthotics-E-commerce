@@ -137,7 +137,7 @@ const HomePage: React.FC<HomePageProps> = ({
             </div>
             <div className="hidden md:flex justify-center">
               <img
-                src="/images/Slider-poster.jpg"
+                src="https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.appspot.com/o/images%2FSlider-poster.jpg?alt=media"
                 alt="Premium Orthotics"
                 className="w-full rounded-lg shadow-xl object-cover max-h-[300px]"
               />
@@ -171,7 +171,7 @@ const HomePage: React.FC<HomePageProps> = ({
         <div className="container mx-auto px-4">
           <div className="relative rounded-xl overflow-hidden shadow-lg">
             <img
-              src="/images/Combo.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.appspot.com/o/images%2FCombo.jpg?alt=media"
               alt="Combo Deals"
               className="w-full h-auto object-cover max-h-96"
             />
@@ -211,7 +211,7 @@ const HomePage: React.FC<HomePageProps> = ({
         <div className="container mx-auto px-4">
           <div className="relative rounded-xl overflow-hidden shadow-lg">
             <img
-              src="/images/Deal.jpg"
+              src="https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.appspot.com/o/images%2FDeal.jpg?alt=media"
               alt="Special Deals"
               className="w-full h-auto object-cover max-h-96"
             />
