@@ -62,19 +62,19 @@ const Header: React.FC<HeaderProps> = ({
             <div className="bg-gray-100 text-gray-600 text-xs py-2">
                 <div className="container mx-auto px-4 flex justify-between items-center">
                     <div className="flex items-center gap-4">
-                        <a href="tel:+919876543210" className="flex items-center gap-1 hover:text-brand-blue">
+                        <a href="tel:+917011770526" className="flex items-center gap-1 hover:text-brand-blue">
                             <PhoneIcon className="w-4 h-4" />
-                            <span>+91 98765 43210</span>
+                            <span>+91 70117 70526</span>
                         </a>
 
-                        <a href="mailto:sales@foxorthotics.com" className="flex items-center gap-1 hover:text-brand-blue">
+                        <a href="mailto:info@brsurgical.com" className="flex items-center gap-1 hover:text-brand-blue">
                             <MailIcon className="w-4 h-4" />
-                            <span className="hidden sm:inline">sales@foxorthotics.com</span>
+                            <span className="hidden sm:inline">info@brsurgical.com</span>
                         </a>
 
                         <div className="hidden md:flex items-center gap-1">
                             <LocationMarkerIcon className="w-4 h-4" />
-                            <span>New Delhi, India</span>
+                            <span>North Ghonda, Delhi</span>
                         </div>
                     </div>
 
@@ -88,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({
                             title="Chat on WhatsApp"
                         >
                             <img 
-                                src="/logos/whatsapp-official.svg" 
+                                src="/logos/whatsapp-official.png" 
                                 alt="WhatsApp" 
                                 className="w-6 h-6 rounded-full"
                             />
@@ -191,20 +191,20 @@ const Header: React.FC<HeaderProps> = ({
             {/* ---------- NAVIGATION BAR ---------- */}
             <nav className="border-b bg-white hidden md:block">
                 <div className="container mx-auto px-4 flex items-center gap-1">
-                    <a href="#/" className="px-4 py-3 font-semibold hover:bg-gray-100">Home</a>
-                    <a href="#/products" className="px-4 py-3 font-semibold bg-purple-100 text-purple-700">All Products</a>
+                    <a href="#/" className="px-4 py-3 font-semibold hover:bg-brand-light-cyan">Home</a>
+                    <a href="#/products" className="px-4 py-3 font-semibold bg-brand-light-cyan text-brand-blue">All Products</a>
 
                     {CATEGORIES.slice(0, 5).map((cat) => (
                         <a
                             key={cat.name}
                             href={`#/category/${slugify(cat.name)}`}
-                            className="px-4 py-3 hover:bg-gray-100 text-gray-700 font-medium"
+                            className="px-4 py-3 hover:bg-brand-light-cyan text-gray-700 font-medium"
                         >
                             {cat.name}
                         </a>
                     ))}
 
-                    <a href="#/dealer" className="ml-auto text-red-600 font-bold px-4 py-3 hover:bg-red-50">
+                    <a href="#/dealer" className="ml-auto text-brand-accent font-bold px-4 py-3 hover:bg-brand-light-cyan">
                         Bulk Orders
                     </a>
                 </div>

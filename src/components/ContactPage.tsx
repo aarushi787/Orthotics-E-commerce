@@ -44,15 +44,15 @@ const ContactPage: React.FC = () => {
               <ul className="space-y-4 text-gray-600">
                 <li className="flex items-center gap-3">
                     <MailIcon className="w-6 h-6 text-brand-blue"/>
-                    <a href="mailto:sales@foxorthotics.com" className="hover:text-brand-blue">sales@foxorthotics.com</a>
+                    <a href="mailto:info@brsurgical.com" className="hover:text-brand-blue">info@brsurgical.com</a>
                 </li>
                  <li className="flex items-center gap-3">
                     <PhoneIcon className="w-6 h-6 text-brand-blue"/>
-                    <a href="tel:+919876543210" className="hover:text-brand-blue">+91 98765 43210</a>
+                    <a href="tel:+917011770526" className="hover:text-brand-blue">+91 70117 70526</a>
                 </li>
                 <li className="flex items-start gap-3">
                     <LocationMarkerIcon className="w-6 h-6 text-brand-blue flex-shrink-0 mt-1"/>
-                    <span>123 Ortho Lane, Medical District, New Delhi, India - 110001</span>
+                    <span>B-59, Krishna Kunj Gali, North Ghonda, Delhi-110053</span>
                 </li>
               </ul>
             </div>

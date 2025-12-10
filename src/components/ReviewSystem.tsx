@@ -68,7 +68,7 @@ export default function ReviewSystem({ productId }:Props){
           className="w-full p-2 border h-24 rounded mb-2"/>
 
         <button onClick={submit}
-          className="bg-blue-600 hover:bg-blue-700 text-white w-full py-2 rounded font-bold">
+          className="bg-brand-blue hover:bg-brand-blue-dark text-white w-full py-2 rounded font-bold transition">
           Submit Review
         </button>
       </div>

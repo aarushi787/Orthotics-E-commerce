@@ -11,7 +11,7 @@ export default function ComparePanel({ allProducts }: any) {
 
 return list.length>0 &&(
 <>
-<button className="fixed bottom-6 right-6 bg-blue-600 text-white px-5 py-3 rounded-full shadow-lg"
+<button className="fixed bottom-6 right-6 bg-brand-blue text-white px-5 py-3 rounded-full shadow-lg hover:bg-brand-blue-dark transition"
   onClick={()=>setOpen(true)}>
   🔍 Compare ({list.length})
 </button>

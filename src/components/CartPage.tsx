@@ -16,8 +16,37 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
   const tax = +(subtotal * 0.05).toFixed(2); // 5% GST
   const total = +(subtotal + tax).toFixed(2);
   const [checkoutError, setCheckoutError] = useState<string | null>(null);
+  const [showCheckoutForm, setShowCheckoutForm] = useState(false);
+  const [customerDetails, setCustomerDetails] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+    city: '',
+    state: '',
+    pincode: ''
+  });
   const MIN_QTY = 50;
   const INITIAL_QTY = 50;
+
+  const sendOrderToWhatsApp = () => {
+    // Build order lines
+    const orderLines = cartItems.map(item => `${item.product.name} (${item.product.sku}): ${item.quantity} x ₹${item.product.price}`).join('\n');
+
+    const customerInfo = (customerDetails && (customerDetails.name || customerDetails.phone || customerDetails.address))
+      ? `Customer:\nName: ${customerDetails.name || '-'}\nPhone: ${customerDetails.phone || '-'}\nAddress: ${customerDetails.address || '-'}, ${customerDetails.city || '-'} ${customerDetails.pincode || ''}`
+      : 'Customer: (not provided)';
+
+    const subtotalStr = `Subtotal: ₹${subtotal.toFixed(2)}`;
+    const taxStr = `GST (5%): ₹${tax.toFixed(2)}`;
+    const totalStr = `Total: ₹${total.toFixed(2)}`;
+
+    const message = `*New Order from Website*\n\n${customerInfo}\n\n*Order Items:*\n${orderLines}\n\n*Summary:*\n${subtotalStr}\n${taxStr}\n${totalStr}\n\nPlease confirm availability and shipping.`;
+
+    const phone = '917011770526'; // B.R. Surgical
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  };
 
   if (cartItems.length === 0) {
     return (
@@ -136,74 +165,16 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                   )}
 
                   <button
-                    onClick={async () => {
-                      setCheckoutError(null);
-                      // Validate min quantities before checkout
-                      for (const item of cartItems) {
-                        if (item.quantity < MIN_QTY) {
-                          setCheckoutError(`Minimum order quantity for "${item.product.name}" is ${MIN_QTY} pieces.`);
-                          return;
-                        }
-                      }
-
-                      try {
-                        // Create razorpay order on server
-                        const razorpayOrder = await api.createRazorpayOrder(total);
-
-                        // Load Razorpay script if not loaded
-                        if (!(window as any).Razorpay) {
-                          await new Promise((resolve, reject) => {
-                            const script = document.createElement('script');
-                            script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-                            script.onload = resolve;
-                            script.onerror = reject;
-                            document.body.appendChild(script);
-                          });
-                        }
-
-                        const options = {
-                          key: RAZORPAY_KEY_ID,
-                          amount: razorpayOrder.amount, // amount in paise
-                          currency: razorpayOrder.currency || 'INR',
-                          name: 'Fox Orthotics',
-                          description: 'Order Payment',
-                          order_id: razorpayOrder.id,
-                          handler: async function (response: any) {
-                            try {
-                              // After successful payment, create order in backend
-                              await api.createOrder(
-                                cartItems.map(ci => ({ productId: ci.product.id, quantity: ci.quantity, price: ci.product.price })),
-                                total,
-                                tax,
-                                0,
-                                'Customer provided at checkout',
-                                `razorpay_payment_id:${response.razorpay_payment_id}`
-                              );
-                              // Redirect to orders or show success
-                              window.location.href = '#/orders';
-                            } catch (err) {
-                              console.error(err);
-                              setCheckoutError('Payment succeeded but failed to create order. Please contact support.');
-                            }
-                          },
-                          prefill: {
-                            // Optionally prefill user info if available
-                          },
-                          notes: {},
-                          theme: { color: '#0D47A1' }
-                        };
-
-                        const rzp = new (window as any).Razorpay(options);
-                        rzp.open();
-
-                      } catch (err) {
-                        console.error(err);
-                        setCheckoutError('Unable to initialize payment. Please try again later.');
-                      }
-                    }}
+                    onClick={() => setShowCheckoutForm(true)}
                     className="w-full mt-6 bg-brand-blue text-white font-bold py-3 rounded-lg hover:bg-brand-blue-dark transition-colors duration-200"
                   >
                     Proceed to Checkout
+                  </button>
+                  <button
+                    onClick={sendOrderToWhatsApp}
+                    className="w-full mt-3 bg-green-500 text-white font-bold py-3 rounded-lg hover:bg-green-600 transition-colors duration-200"
+                  >
+                    Send Order via WhatsApp
                   </button>
                   <p className="text-xs text-gray-500 text-center mt-4">
                     ⓘ Minimum order quantity: {MIN_QTY} pieces per product
@@ -213,6 +184,160 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
             </div>
           </div>
         </div>
+
+        {/* Checkout Form Modal */}
+        {showCheckoutForm && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+              <div className="sticky top-0 bg-gradient-to-r from-brand-blue to-brand-accent text-white p-6 flex justify-between items-center">
+                <h2 className="text-2xl font-bold">Checkout Details</h2>
+                <button onClick={() => setShowCheckoutForm(false)} className="text-2xl hover:opacity-80">×</button>
+              </div>
+
+              <form onSubmit={async (e) => {
+                e.preventDefault();
+                setCheckoutError(null);
+
+                // Validate form
+                if (!customerDetails.name || !customerDetails.email || !customerDetails.phone || !customerDetails.address || !customerDetails.city || !customerDetails.state || !customerDetails.pincode) {
+                  setCheckoutError('Please fill in all fields');
+                  return;
+                }
+
+                // Validate phone
+                if (!/^\d{10}$/.test(customerDetails.phone.replace(/\D/g, ''))) {
+                  setCheckoutError('Please enter a valid 10-digit phone number');
+                  return;
+                }
+
+                // Validate min quantities
+                for (const item of cartItems) {
+                  if (item.quantity < MIN_QTY) {
+                    setCheckoutError(`Minimum order quantity for "${item.product.name}" is ${MIN_QTY} pieces.`);
+                    return;
+                  }
+                }
+
+                try {
+                  // Send order details to WhatsApp
+                  const orderDetails = cartItems.map(item => 
+                    `${item.product.name} (${item.product.sku}): ${item.quantity} x ₹${item.product.price}`
+                  ).join('\n');
+
+                  const whatsappMessage = `*New Order from Fox Orthotics*\n\n*Customer Details:*\nName: ${customerDetails.name}\nEmail: ${customerDetails.email}\nPhone: ${customerDetails.phone}\nAddress: ${customerDetails.address}\nCity: ${customerDetails.city}, ${customerDetails.state} ${customerDetails.pincode}\n\n*Order Items:*\n${orderDetails}\n\n*Order Summary:*\nSubtotal: ₹${subtotal.toFixed(2)}\nGST (5%): ₹${tax.toFixed(2)}\nTotal: ₹${total.toFixed(2)}`;
+
+                  // Open WhatsApp with message
+                  const whatsappURL = `https://wa.me/917011770526?text=${encodeURIComponent(whatsappMessage)}`;
+                  window.open(whatsappURL, '_blank');
+
+                  // Create razorpay order on server
+                  const razorpayOrder = await api.createRazorpayOrder(total);
+
+                  // Load Razorpay script if not loaded
+                  if (!(window as any).Razorpay) {
+                    await new Promise((resolve, reject) => {
+                      const script = document.createElement('script');
+                      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+                      script.onload = resolve;
+                      script.onerror = reject;
+                      document.body.appendChild(script);
+                    });
+                  }
+
+                  const options = {
+                    key: RAZORPAY_KEY_ID,
+                    amount: razorpayOrder.amount,
+                    currency: razorpayOrder.currency || 'INR',
+                    name: 'Fox Orthotics',
+                    description: 'Order Payment',
+                    order_id: razorpayOrder.id,
+                    handler: async function (response: any) {
+                      try {
+                        await api.createOrder(
+                          cartItems.map(ci => ({ productId: ci.product.id, quantity: ci.quantity, price: ci.product.price })),
+                          total,
+                          tax,
+                          0,
+                          JSON.stringify(customerDetails),
+                          `razorpay_payment_id:${response.razorpay_payment_id}`
+                        );
+                        window.location.href = '#/orders';
+                      } catch (err) {
+                        console.error(err);
+                        setCheckoutError('Payment succeeded but failed to create order. Please contact support.');
+                      }
+                    },
+                    prefill: {
+                      name: customerDetails.name,
+                      email: customerDetails.email,
+                      contact: customerDetails.phone
+                    },
+                    notes: {
+                      address: customerDetails.address,
+                      city: customerDetails.city,
+                      state: customerDetails.state,
+                      pincode: customerDetails.pincode
+                    },
+                    theme: { color: '#197D86' }
+                  };
+
+                  const rzp = new (window as any).Razorpay(options);
+                  rzp.open();
+
+                } catch (err) {
+                  console.error(err);
+                  setCheckoutError('Unable to initialize payment. Please try again later.');
+                }
+              }} className="p-6 space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name *</label>
+                    <input type="text" required value={customerDetails.name} onChange={(e) => setCustomerDetails({...customerDetails, name: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="John Doe" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Email *</label>
+                    <input type="email" required value={customerDetails.email} onChange={(e) => setCustomerDetails({...customerDetails, email: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="john@example.com" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Phone Number *</label>
+                    <input type="tel" required value={customerDetails.phone} onChange={(e) => setCustomerDetails({...customerDetails, phone: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="+91 9999999999" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Pincode *</label>
+                    <input type="text" required value={customerDetails.pincode} onChange={(e) => setCustomerDetails({...customerDetails, pincode: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="110053" />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Address *</label>
+                    <input type="text" required value={customerDetails.address} onChange={(e) => setCustomerDetails({...customerDetails, address: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="Street address" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">City *</label>
+                    <input type="text" required value={customerDetails.city} onChange={(e) => setCustomerDetails({...customerDetails, city: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="Delhi" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">State *</label>
+                    <input type="text" required value={customerDetails.state} onChange={(e) => setCustomerDetails({...customerDetails, state: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="Delhi" />
+                  </div>
+                </div>
+
+                {checkoutError && (
+                  <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-sm text-red-700">
+                    {checkoutError}
+                  </div>
+                )}
+
+                <div className="flex gap-3 pt-4">
+                  <button type="button" onClick={() => setShowCheckoutForm(false)} className="flex-1 px-6 py-3 border-2 border-brand-blue text-brand-blue font-bold rounded-lg hover:bg-brand-light-cyan transition-colors">
+                    Cancel
+                  </button>
+                  <button type="submit" className="flex-1 px-6 py-3 bg-brand-blue text-white font-bold rounded-lg hover:bg-brand-blue-dark transition-colors">
+                    Proceed to Payment
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
     </div>
   );
 };

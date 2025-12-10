@@ -10,7 +10,7 @@ export default function FloatingWhatsAppButton() {
       aria-label="Chat with us on WhatsApp"
     >
       <img 
-        src="/logos/whatsapp-official.svg" 
+        src="/logos/whatsapp-official.png" 
         alt="WhatsApp" 
         className="w-16 h-16 rounded-full"
       />

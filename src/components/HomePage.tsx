@@ -86,7 +86,7 @@ const HomePage: React.FC<HomePageProps> = ({
             <span className="text-lg">{isWishlisted ? '❤️' : '🤍'}</span>
           </button>
         </div>
-        <a href={`#/product/${product.id}`} className="font-semibold text-sm hover:text-blue-600 line-clamp-2">
+        <a href={`#/product/${product.id}`} className="font-semibold text-sm hover:text-brand-blue line-clamp-2">
           {product.name}
         </a>
         <div className="flex items-center gap-1 my-1">
@@ -94,14 +94,14 @@ const HomePage: React.FC<HomePageProps> = ({
           <span className="text-xs text-gray-500">{product.moq} MOQ</span>
         </div>
         <div className="flex items-center gap-2 mt-auto mb-2">
-          <span className="text-lg font-bold text-blue-700">₹{product.price}</span>
+          <span className="text-lg font-bold text-brand-blue">₹{product.price}</span>
           {product.originalPrice && product.originalPrice > product.price && (
             <span className="text-xs line-through text-gray-400">₹{product.originalPrice}</span>
           )}
         </div>
         <button
           onClick={() => onAddToCart(product, 50)}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded text-sm font-semibold shadow-sm hover:shadow-md transition"
+          className="w-full bg-brand-blue hover:bg-brand-blue-dark text-white py-2 rounded text-sm font-semibold shadow-sm hover:shadow-md transition"
         >
           Add to Cart
         </button>
@@ -111,35 +111,35 @@ const HomePage: React.FC<HomePageProps> = ({
 
   return (
     <div className="bg-white">
-      {/* ============ HERO BANNER ============ */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-8 md:py-16">
+      {/* ============ HERO SLIDER WITH POSTERS ============ */}
+      <div className="relative bg-gradient-to-r from-brand-blue to-brand-accent text-white py-8 md:py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-3xl md:text-5xl font-bold mb-4">Premium Orthopedic Solutions</h1>
-              <p className="text-lg md:text-xl mb-6 text-blue-100">
+              <p className="text-lg md:text-xl mb-6 opacity-90">
                 Quality orthopedic products for better health and comfort. Shop our exclusive collection of medical-grade supports and braces.
               </p>
               <div className="flex gap-4">
                 <a
                   href="#/products"
-                  className="bg-yellow-400 text-blue-800 px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+                  className="bg-brand-accent text-brand-blue-dark px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl hover:bg-brand-light-cyan transform hover:-translate-y-0.5 transition-all"
                 >
                   Shop Now
                 </a>
                 <a
                   href="#/dealer"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition"
+                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-brand-blue transition"
                 >
                   Bulk Orders
                 </a>
               </div>
             </div>
-            <div className="hidden md:block">
+            <div className="hidden md:flex justify-center">
               <img
-                src="https://via.placeholder.com/400x300?text=Premium+Orthotics"
-                alt="Hero"
-                className="w-full rounded-lg"
+                src="/images/Slider-poster.jpg"
+                alt="Premium Orthotics"
+                className="w-full rounded-lg shadow-xl object-cover max-h-[300px]"
               />
             </div>
           </div>
@@ -147,15 +147,15 @@ const HomePage: React.FC<HomePageProps> = ({
       </div>
 
       {/* ============ CATEGORIES GRID ============ */}
-      <div className="bg-gray-50 py-8 md:py-12">
+      <div className="bg-brand-light-cyan py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8">Shop by Category</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-brand-blue-dark">Shop by Category</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((cat) => (
               <a
                 key={cat.name}
                 href={`#/category/${slugify(cat.name)}`}
-                className="bg-white rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all"
+                className="bg-white rounded-lg p-6 text-center hover:shadow-lg hover:scale-105 transition-all hover:border-2 hover:border-brand-blue"
               >
                 <div className="text-4xl mb-3">{cat.icon}</div>
                 <h3 className="font-semibold text-sm md:text-base line-clamp-2">{cat.name}</h3>
@@ -166,12 +166,33 @@ const HomePage: React.FC<HomePageProps> = ({
         </div>
       </div>
 
+      {/* ============ COMBO DEAL POSTER ============ */}
+      <div className="py-8 md:py-12">
+        <div className="container mx-auto px-4">
+          <div className="relative rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="/images/Combo.jpg"
+              alt="Combo Deals"
+              className="w-full h-auto object-cover max-h-96"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <a
+                href="#/products"
+                className="bg-brand-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-brand-blue transition-all shadow-lg"
+              >
+                Explore Combo Deals
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* ============ FEATURED DEALS ============ */}
-      <div className="py-12 md:py-16">
+      <div className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold">🔥 Featured Deals</h2>
-            <a href="#/products" className="text-blue-600 hover:text-blue-800 font-semibold">
+            <h2 className="text-2xl md:text-3xl font-bold text-brand-blue-dark">🔥 Featured Deals</h2>
+            <a href="#/products" className="text-brand-blue hover:text-brand-blue-dark font-semibold">
               View All →
             </a>
           </div>
@@ -185,26 +206,33 @@ const HomePage: React.FC<HomePageProps> = ({
         </div>
       </div>
 
-      {/* ============ PROMOTIONAL BANNER ============ */}
-      <div className="bg-gradient-to-r from-orange-400 to-red-500 text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Limited Time Offer</h2>
-          <p className="text-lg mb-6">Get up to 50% OFF on selected orthopedic products this month!</p>
-          <a
-            href="#/"
-            className="inline-block bg-white text-red-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
-          >
-            Explore Offers
-          </a>
+      {/* ============ DEAL POSTER ============ */}
+      <div className="py-8 md:py-12 bg-brand-light-cyan">
+        <div className="container mx-auto px-4">
+          <div className="relative rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="/images/Deal.jpg"
+              alt="Special Deals"
+              className="w-full h-auto object-cover max-h-96"
+            />
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+              <a
+                href="#/products"
+                className="bg-brand-accent text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-brand-blue transition-all shadow-lg"
+              >
+                Shop Special Deals
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* ============ TOP RATED PRODUCTS ============ */}
-      <div className="py-12 md:py-16 bg-gray-50">
+      <div className="py-12 md:py-16 bg-brand-light-cyan">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold">⭐ Top Rated Products</h2>
-            <a href="#/products" className="text-blue-600 hover:text-blue-800 font-semibold">
+            <h2 className="text-2xl md:text-3xl font-bold text-brand-blue-dark">⭐ Top Rated Products</h2>
+            <a href="#/products" className="text-brand-blue hover:text-brand-blue-dark font-semibold">
               View All →
             </a>
           </div>
@@ -219,27 +247,27 @@ const HomePage: React.FC<HomePageProps> = ({
       </div>
 
       {/* ============ INFO CARDS ============ */}
-      <div className="py-12 md:py-16">
+      <div className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-blue-50 p-6 rounded-lg text-center">
+            <div className="bg-brand-light-cyan p-6 rounded-lg text-center hover:shadow-lg transition">
               <div className="text-4xl mb-3">✅</div>
-              <h3 className="font-bold mb-2">100% Genuine</h3>
+              <h3 className="font-bold mb-2 text-brand-blue-dark">100% Genuine</h3>
               <p className="text-sm text-gray-600">Authentic medical-grade products</p>
             </div>
-            <div className="bg-green-50 p-6 rounded-lg text-center">
+            <div className="bg-brand-light-cyan p-6 rounded-lg text-center hover:shadow-lg transition">
               <div className="text-4xl mb-3">🚚</div>
-              <h3 className="font-bold mb-2">Fast Delivery</h3>
+              <h3 className="font-bold mb-2 text-brand-blue-dark">Fast Delivery</h3>
               <p className="text-sm text-gray-600">Pan-India shipping available</p>
             </div>
-            <div className="bg-purple-50 p-6 rounded-lg text-center">
+            <div className="bg-brand-light-cyan p-6 rounded-lg text-center hover:shadow-lg transition">
               <div className="text-4xl mb-3">🛡️</div>
-              <h3 className="font-bold mb-2">Secure Payment</h3>
+              <h3 className="font-bold mb-2 text-brand-blue-dark">Secure Payment</h3>
               <p className="text-sm text-gray-600">Safe and encrypted transactions</p>
             </div>
-            <div className="bg-yellow-50 p-6 rounded-lg text-center">
+            <div className="bg-brand-light-cyan p-6 rounded-lg text-center hover:shadow-lg transition">
               <div className="text-4xl mb-3">💰</div>
-              <h3 className="font-bold mb-2">Best Prices</h3>
+              <h3 className="font-bold mb-2 text-brand-blue-dark">Best Prices</h3>
               <p className="text-sm text-gray-600">Competitive rates guaranteed</p>
             </div>
           </div>
@@ -247,9 +275,9 @@ const HomePage: React.FC<HomePageProps> = ({
       </div>
 
       {/* ============ TESTIMONIALS ============ */}
-      <div className="bg-gray-100 py-12 md:py-16">
+      <div className="bg-brand-light-cyan py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">What Our Customers Say</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-brand-blue-dark">What Our Customers Say</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
@@ -271,16 +299,16 @@ const HomePage: React.FC<HomePageProps> = ({
                 rating: 4.5,
               },
             ].map((testimonial, i) => (
-              <div key={i} className="bg-white p-6 rounded-lg shadow">
+              <div key={i} className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition border-l-4 border-brand-blue">
                 <div className="flex gap-1 mb-3">
                   {[...Array(5)].map((_, j) => (
-                    <span key={j} className="text-yellow-400">
+                    <span key={j} className="text-brand-accent">
                       {j < Math.floor(testimonial.rating) ? '★' : '☆'}
                     </span>
                   ))}
                 </div>
                 <p className="text-gray-700 mb-4">"{testimonial.text}"</p>
-                <div className="font-semibold">{testimonial.name}</div>
+                <div className="font-semibold text-brand-blue-dark">{testimonial.name}</div>
                 <div className="text-sm text-gray-500">{testimonial.role}</div>
               </div>
             ))}
@@ -289,13 +317,13 @@ const HomePage: React.FC<HomePageProps> = ({
       </div>
 
       {/* ============ CTA SECTION ============ */}
-      <div className="bg-blue-600 text-white py-12 md:py-16">
+      <div className="bg-gradient-to-r from-brand-blue to-brand-accent text-white py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Thousands of Satisfied Customers</h2>
-          <p className="text-lg mb-8 text-blue-100">Start shopping for premium orthopedic solutions today</p>
+          <p className="text-lg mb-8 opacity-90">Start shopping for premium orthopedic solutions today</p>
           <a
             href="#/products"
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition"
+            className="inline-block bg-white text-brand-blue px-8 py-3 rounded-lg font-bold hover:bg-brand-light-cyan transition"
           >
             Start Shopping
           </a>

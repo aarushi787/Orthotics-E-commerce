@@ -6,24 +6,24 @@ const slugify = (text: string) => text.toLowerCase().replace(/ & /g, '-and-').re
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white mt-16">
+        <footer className="bg-gradient-to-b from-brand-blue-dark to-brand-blue text-white mt-16">
              {/* Trust Badges */}
-            <div className="bg-gray-800/50">
+            <div className="bg-brand-blue/80">
                 <div className="container mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div className="flex items-center justify-center gap-3 text-sm text-gray-300">
-                        <CertificateIcon className="w-7 h-7 text-yellow-400"/>
+                    <div className="flex items-center justify-center gap-3 text-sm text-gray-100">
+                        <CertificateIcon className="w-7 h-7 text-brand-accent"/>
                         <span className="font-semibold">ISO 13485 Certified</span>
                     </div>
-                    <div className="flex items-center justify-center gap-3 text-sm text-gray-300">
-                         <ShieldCheckIcon className="w-7 h-7 text-yellow-400"/>
+                    <div className="flex items-center justify-center gap-3 text-sm text-gray-100">
+                         <ShieldCheckIcon className="w-7 h-7 text-brand-accent"/>
                         <span className="font-semibold">FDA Approved Products</span>
                     </div>
-                    <div className="flex items-center justify-center gap-3 text-sm text-gray-300">
-                        <div className="font-bold text-xl text-yellow-400 border-2 border-yellow-400 rounded-full w-8 h-8 flex items-center justify-center">CE</div>
+                    <div className="flex items-center justify-center gap-3 text-sm text-gray-100">
+                        <div className="font-bold text-xl text-brand-accent border-2 border-brand-accent rounded-full w-8 h-8 flex items-center justify-center">CE</div>
                         <span className="font-semibold">CE Marked Quality</span>
                     </div>
-                    <div className="flex items-center justify-center gap-3 text-sm text-gray-300">
-                        <span className="text-2xl font-bold text-yellow-400">10+</span>
+                    <div className="flex items-center justify-center gap-3 text-sm text-gray-100">
+                        <span className="text-2xl font-bold text-brand-accent">10+</span>
                         <span className="font-semibold">Years of Industry Leadership</span>
                     </div>
                 </div>
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
                             <div className="bg-white p-1.5 rounded-full">
                                <svg className="w-6 h-6 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg>
                             </div>
-                            <h3 className="text-xl font-bold">Fox Orthotics</h3>
+                            <h3 className="text-xl font-bold">B.R. Surgical</h3>
                         </a>
                         <p className="text-gray-400 text-sm mb-4">
                             Your trusted partner for premium orthopedic solutions, dedicated to enhancing mobility and comfort.
@@ -50,50 +50,50 @@ const Footer: React.FC = () => {
                     
                     {/* Categories */}
                      <div>
-                        <h3 className="text-lg font-semibold mb-4 border-l-4 border-yellow-400 pl-3">Top Categories</h3>
+                        <h3 className="text-lg font-semibold mb-4 border-l-4 border-brand-accent pl-3">Top Categories</h3>
                         <ul className="space-y-2 text-sm">
                             {CATEGORIES.slice(0, 5).map(cat => (
-                                <li key={cat.name}><a href={`#/category/${slugify(cat.name)}`} className="text-gray-400 hover:text-white transition-transform inline-block hover:translate-x-1">{cat.name}</a></li>
+                                <li key={cat.name}><a href={`#/category/${slugify(cat.name)}`} className="text-gray-300 hover:text-white transition-transform inline-block hover:translate-x-1">{cat.name}</a></li>
                             ))}
-                             <li><a href={`#/`} className="text-gray-400 hover:text-white transition-transform inline-block hover:translate-x-1">... and more</a></li>
+                             <li><a href={`#/`} className="text-gray-300 hover:text-white transition-transform inline-block hover:translate-x-1">... and more</a></li>
                         </ul>
                     </div>
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 border-l-4 border-yellow-400 pl-3">Contact Us</h3>
+                        <h3 className="text-lg font-semibold mb-4 border-l-4 border-brand-accent pl-3">Contact Us</h3>
                         <ul className="space-y-3 text-sm">
                            <li className="flex items-start gap-3">
-                                <LocationMarkerIcon className="w-5 h-5 mt-0.5 text-gray-400 flex-shrink-0"/>
-                                <span className="text-gray-400">123 Ortho Lane, Medical District, New Delhi, India - 110001</span>
+                                <LocationMarkerIcon className="w-5 h-5 mt-0.5 text-gray-300 flex-shrink-0"/>
+                                <span className="text-gray-300">B-59, Krishna Kunj Gali, North Ghonda, Delhi-110053</span>
                             </li>
                              <li className="flex items-center gap-3">
-                                <PhoneIcon className="w-5 h-5 text-gray-400"/>
-                                <a href="tel:+919876543210" className="text-gray-400 hover:text-white">+91 98765 43210</a>
+                                <PhoneIcon className="w-5 h-5 text-gray-300"/>
+                                <a href="tel:+917011770526" className="text-gray-300 hover:text-white">+91 70117 70526</a>
                             </li>
                             <li className="flex items-center gap-3">
-                                <MailIcon className="w-5 h-5 text-gray-400"/>
-                                <a href="mailto:sales@foxorthotics.com" className="text-gray-400 hover:text-white">sales@foxorthotics.com</a>
+                                <MailIcon className="w-5 h-5 text-gray-300"/>
+                                <a href="mailto:info@brsurgical.com" className="text-gray-300 hover:text-white">info@brsurgical.com</a>
                             </li>
                         </ul>
                     </div>
 
                     {/* Quick Links & Payment */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 border-l-4 border-yellow-400 pl-3">Company</h3>
+                        <h3 className="text-lg font-semibold mb-4 border-l-4 border-brand-accent pl-3">Company</h3>
                          <ul className="space-y-2 text-sm">
-                            <li><a href="#/about" className="text-gray-400 hover:text-white transition-transform inline-block hover:translate-x-1">About Us</a></li>
-                            <li><a href="#/contact" className="text-gray-400 hover:text-white transition-transform inline-block hover:translate-x-1">Contact Us</a></li>
-                            <li><a href="#/dealer" className="text-gray-400 hover:text-white transition-transform inline-block hover:translate-x-1">Become a Dealer</a></li>
+                            <li><a href="#/about" className="text-gray-300 hover:text-white transition-transform inline-block hover:translate-x-1">About Us</a></li>
+                            <li><a href="#/contact" className="text-gray-300 hover:text-white transition-transform inline-block hover:translate-x-1">Contact Us</a></li>
+                            <li><a href="#/dealer" className="text-gray-300 hover:text-white transition-transform inline-block hover:translate-x-1">Become a Dealer</a></li>
                         </ul>
-                        <h3 className="text-lg font-semibold mt-6 mb-4 border-l-4 border-yellow-400 pl-3">We Accept</h3>
-                        <p className="text-gray-400 text-sm">Credit Card, Debit Card, Bank Transfer, UPI</p>
+                        <h3 className="text-lg font-semibold mt-6 mb-4 border-l-4 border-brand-accent pl-3">We Accept</h3>
+                        <p className="text-gray-300 text-sm">Credit Card, Debit Card, Bank Transfer, UPI</p>
                     </div>
                 </div>
             </div>
-            <div className="bg-black/20 py-4">
-                <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-center text-sm text-gray-400">
-                    <span>&copy; {new Date().getFullYear()} Fox Orthotics Industries. All Rights Reserved.</span>
+            <div className="bg-brand-blue/60 py-4">
+                <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-center text-sm text-gray-300">
+                    <span>&copy; {new Date().getFullYear()} B.R. Surgical. All Rights Reserved.</span>
                      <div className="flex gap-4 mt-2 sm:mt-0">
                         <a href="#" className="hover:text-white">Privacy Policy</a>
                         <a href="#" className="hover:text-white">Terms of Service</a>

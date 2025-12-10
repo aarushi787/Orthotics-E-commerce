@@ -4,7 +4,7 @@
  */
 
 // Business WhatsApp number (use your actual business number)
-export const BUSINESS_WHATSAPP_NUMBER = "919027281814"; // Replace with actual number
+export const BUSINESS_WHATSAPP_NUMBER = "917011770526"; // Replace with actual number
 
 /**
  * Format phone number to WhatsApp format (remove special chars, add country code if needed)
