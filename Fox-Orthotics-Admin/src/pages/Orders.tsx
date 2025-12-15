@@ -55,7 +55,7 @@ export default function Orders() {
 
   const statusColors: Record<string, string> = {
     pending: "bg-yellow-100 text-yellow-700",
-    processing: "bg-blue-100 text-blue-700",
+    processing: "bg-brand-teal-*100 text-brand-teal-*700",
     shipped: "bg-purple-100 text-purple-700",
     delivered: "bg-green-100 text-green-700",
     cancelled: "bg-red-100 text-red-700",
@@ -76,7 +76,7 @@ export default function Orders() {
 
       <div className="grid grid-cols-5 gap-4 mb-6">
         <div className="bg-white p-4 rounded-lg shadow-lg">
-          <div className="text-2xl font-bold text-blue-600">{stats.total}</div>
+          <div className="text-2xl font-bold text-brand-teal-500">{stats.total}</div>
           <div className="text-sm text-gray-600">Total Orders</div>
         </div>
         <div className="bg-white p-4 rounded-lg shadow-lg">

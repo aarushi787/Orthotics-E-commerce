@@ -11,7 +11,7 @@ const LoginPage: React.FC = () => {
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
             Or{' '}
-            <a href="#" className="font-medium text-brand-accent hover:text-brand-accent-dark">
+            <a href="#" className="font-medium text-brand-teal-500 hover:text-brand-teal-700">
               start your 14-day free trial
             </a>
           </p>
@@ -29,7 +29,7 @@ const LoginPage: React.FC = () => {
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-brand-accent focus:border-brand-accent focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-brand-teal-400 focus:border-brand-teal-300 focus:z-10 sm:text-sm"
                 placeholder="Email address"
               />
             </div>
@@ -43,7 +43,7 @@ const LoginPage: React.FC = () => {
                 type="password"
                 autoComplete="current-password"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-brand-accent focus:border-brand-accent focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-3 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-brand-teal-400 focus:border-brand-teal-300 focus:z-10 sm:text-sm"
                 placeholder="Password"
               />
             </div>
@@ -55,7 +55,7 @@ const LoginPage: React.FC = () => {
                 id="remember-me"
                 name="remember-me"
                 type="checkbox"
-                className="h-4 w-4 text-brand-accent focus:ring-brand-accent border-gray-300 rounded"
+                className="h-4 w-4 text-brand-teal-500 focus:ring-brand-teal-400 border-gray-300 rounded"
               />
               <label htmlFor="remember-me" className="ml-2 block text-sm text-gray-900">
                 Remember me
@@ -63,7 +63,7 @@ const LoginPage: React.FC = () => {
             </div>
 
             <div className="text-sm">
-              <a href="#" className="font-medium text-brand-accent hover:text-brand-accent-dark">
+              <a href="#" className="font-medium text-brand-teal-500 hover:text-brand-teal-700">
                 Forgot your password?
               </a>
             </div>
@@ -72,7 +72,7 @@ const LoginPage: React.FC = () => {
           <div>
             <button
               type="submit"
-              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-brand-blue hover:bg-brand-blue-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue"
+              className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-brand-teal-500 hover:bg-brand-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal-400"
             >
               Sign in
             </button>

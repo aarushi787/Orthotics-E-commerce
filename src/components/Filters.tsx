@@ -36,7 +36,7 @@ const Filters: React.FC<FiltersProps> = ({ filters, onFilterChange, onClear }) =
         <div className="bg-white p-6 rounded-lg shadow-sm border">
             <div className="flex justify-between items-center pb-4 border-b">
                 <h2 className="text-lg font-bold text-gray-900">Filters</h2>
-                <button onClick={onClear} className="text-sm font-medium text-brand-blue hover:underline">Clear All</button>
+                <button onClick={onClear} className="text-sm font-medium text-brand-teal-500 hover:underline">Clear All</button>
             </div>
             
             <FilterSection title="Product Categories">
@@ -48,7 +48,7 @@ const Filters: React.FC<FiltersProps> = ({ filters, onFilterChange, onClear }) =
                                     type="checkbox"
                                     checked={filters.categories.includes(category.name)}
                                     onChange={() => handleCheckboxChange('categories', category.name)}
-                                    className="h-4 w-4 rounded border-gray-300 text-brand-accent focus:ring-brand-accent"
+                                    className="h-4 w-4 rounded border-gray-300 text-brand-teal-500 focus:ring-brand-teal-400"
                                 />
                                 <span className="text-sm text-gray-600">{category.name}</span>
                             </label>
@@ -70,7 +70,7 @@ const Filters: React.FC<FiltersProps> = ({ filters, onFilterChange, onClear }) =
                     step="10"
                     value={filters.priceRange[1]}
                     onChange={(e) => onFilterChange({ priceRange: [filters.priceRange[0], Number(e.target.value)] })}
-                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-brand-accent"
+                    className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-brand-teal-500"
                 />
             </FilterSection>
 
@@ -82,7 +82,7 @@ const Filters: React.FC<FiltersProps> = ({ filters, onFilterChange, onClear }) =
                         <button
                             key={size}
                             onClick={() => handleCheckboxChange('sizes', size)}
-                            className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${filters.sizes.includes(size) ? 'bg-brand-accent-light text-brand-accent border-brand-accent' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'}`}
+                            className={`px-3 py-1.5 text-xs font-medium rounded-full border transition-colors ${filters.sizes.includes(size) ? 'bg-brand-teal-50 text-brand-teal-500 border-brand-teal-300' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'}`}
                         >
                             {size}
                         </button>
@@ -99,7 +99,7 @@ const Filters: React.FC<FiltersProps> = ({ filters, onFilterChange, onClear }) =
                                     type="checkbox"
                                     checked={filters.certifications.includes(cert)}
                                     onChange={() => handleCheckboxChange('certifications', cert)}
-                                    className="h-4 w-4 rounded border-gray-300 text-brand-accent focus:ring-brand-accent"
+                                    className="h-4 w-4 rounded border-gray-300 text-brand-teal-500 focus:ring-brand-teal-400"
                                 />
                                 <span className="text-sm text-gray-600">{cert}</span>
                             </label>
@@ -119,7 +119,7 @@ const Filters: React.FC<FiltersProps> = ({ filters, onFilterChange, onClear }) =
                                     value={option.id}
                                     checked={filters.availability === option.id}
                                     onChange={(e) => onFilterChange({ availability: e.target.value as any })}
-                                    className="h-4 w-4 border-gray-300 text-brand-accent focus:ring-brand-accent"
+                                    className="h-4 w-4 border-gray-300 text-brand-teal-500 focus:ring-brand-teal-400"
                                 />
                                 <span className="text-sm text-gray-600">{option.label}</span>
                             </label>

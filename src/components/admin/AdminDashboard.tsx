@@ -93,7 +93,7 @@ const AdminDashboard: React.FC = () => {
           <button
             onClick={handleCreateQuick}
             disabled={!!actionLoading}
-            className="px-3 py-1 rounded-md bg-brand-blue text-white text-sm"
+            className="px-3 py-1 rounded-md bg-brand-teal-500 text-white text-sm"
           >
             {actionLoading === "create" ? "Creating…" : "Quick Add"}
           </button>

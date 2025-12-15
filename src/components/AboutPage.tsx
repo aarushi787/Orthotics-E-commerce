@@ -5,7 +5,7 @@ const AboutPage: React.FC = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <div className="relative bg-brand-blue-dark text-white text-center py-24">
+      <div className="relative bg-brand-teal-600 text-white text-center py-24">
         <div 
             className="absolute inset-0 bg-cover bg-center opacity-10" 
             style={{backgroundImage: "url('https://images.unsplash.com/photo-1580281657527-38f4497136d6?q=80&w=2940&auto=format&fit=crop')"}}>
@@ -22,7 +22,7 @@ const AboutPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="text-sm font-bold uppercase text-brand-accent">Our Mission</span>
+            <span className="text-sm font-bold uppercase text-brand-teal-500">Our Mission</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-4">Empowering Movement, Enhancing Lives</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               At Fox Orthotics, our mission is to develop and provide high-quality, innovative orthopedic products that empower individuals to live healthier, more active lives. We believe that everyone deserves to move without pain and limitation.
@@ -47,7 +47,7 @@ const AboutPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-gray-900 mb-12">Our Core Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md border">
-              <div className="bg-brand-accent-light text-brand-accent rounded-full p-3 inline-block mb-4">
+              <div className="bg-brand-teal-50 text-brand-teal-500 rounded-full p-3 inline-block mb-4">
                 <CertificateIcon className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Quality & Excellence</h3>
@@ -56,7 +56,7 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md border">
-              <div className="bg-brand-accent-light text-brand-accent rounded-full p-3 inline-block mb-4">
+              <div className="bg-brand-teal-50 text-brand-teal-500 rounded-full p-3 inline-block mb-4">
                 <UsersIcon className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Customer-Centric</h3>
@@ -65,7 +65,7 @@ const AboutPage: React.FC = () => {
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-md border">
-              <div className="bg-brand-accent-light text-brand-accent rounded-full p-3 inline-block mb-4">
+              <div className="bg-brand-teal-50 text-brand-teal-500 rounded-full p-3 inline-block mb-4">
                 <ShieldCheckIcon className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Integrity & Trust</h3>

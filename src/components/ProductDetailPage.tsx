@@ -135,7 +135,7 @@ const ProductDetailPage = ({ product, allProducts, wishlist, onToggleWishlist, o
               {product.sizes.map(s=>(
                 <button key={s} onClick={()=>setSelectedSize(s)}
                   className={`px-4 py-2 rounded-full border
-                  ${selectedSize===s?"bg-brand-blue text-white border-brand-blue":"hover:bg-brand-light-cyan"}`}>
+                  ${selectedSize===s?"bg-brand-teal-500 text-white border-brand-teal-500":"hover:bg-brand-teal-50"}`}>
                   {s}
                 </button>
               ))}
@@ -154,7 +154,7 @@ const ProductDetailPage = ({ product, allProducts, wishlist, onToggleWishlist, o
             <button onClick={()=>onAddToCart(product,quantity)}
               title="Add to cart"
               aria-label="Add to cart"
-              className="flex-1 flex justify-center items-center gap-2 bg-brand-blue hover:bg-brand-blue-dark text-white py-3 rounded-lg font-bold shadow-md transition">
+              className="flex-1 flex justify-center items-center gap-2 bg-brand-teal-500 hover:bg-brand-teal-600 text-white py-3 rounded-lg font-bold shadow-md transition">
               <ShoppingCartIcon className="w-5"/> Add to Cart
             </button>
 
@@ -221,11 +221,11 @@ const ProductDetailPage = ({ product, allProducts, wishlist, onToggleWishlist, o
 
       <div className="bg-white p-6 border rounded shadow space-y-4">
         <div className="flex gap-3 items-center">
-          <TruckIcon className="w-7 text-brand-blue"/>
+          <TruckIcon className="w-7 text-brand-teal-500"/>
           <p>🚚 Fast Pan-India Delivery</p>
         </div>
         <div className="flex gap-3 items-center">
-          <ShieldCheckIcon className="w-7 text-brand-blue"/>
+          <ShieldCheckIcon className="w-7 text-brand-teal-500"/>
           <p>🛡 100% Genuine Products</p>
         </div>
       </div>

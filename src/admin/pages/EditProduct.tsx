@@ -78,7 +78,7 @@ const EditProduct = () => {
           onChange={(e) => setNewImage(e.target.files?.[0])}
         />
 
-        <button className="bg-blue-600 text-white p-2 rounded w-full">
+        <button className="bg-brand-teal-500 text-white p-2 rounded w-full">
           Update Product
         </button>
       </form>

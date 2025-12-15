@@ -92,7 +92,7 @@ export default function Settings() {
           onClick={() => setActiveTab("profile")}
           className={`p-4 rounded-lg font-semibold transition ${
             activeTab === "profile"
-              ? "bg-blue-600 text-white shadow-lg"
+              ? "bg-brand-teal-500 text-white shadow-lg"
               : "bg-white text-gray-700 hover:bg-gray-50"
           }`}
         >
@@ -102,7 +102,7 @@ export default function Settings() {
           onClick={() => setActiveTab("security")}
           className={`p-4 rounded-lg font-semibold transition ${
             activeTab === "security"
-              ? "bg-blue-600 text-white shadow-lg"
+              ? "bg-brand-teal-500 text-white shadow-lg"
               : "bg-white text-gray-700 hover:bg-gray-50"
           }`}
         >
@@ -112,7 +112,7 @@ export default function Settings() {
           onClick={() => setActiveTab("preferences")}
           className={`p-4 rounded-lg font-semibold transition ${
             activeTab === "preferences"
-              ? "bg-blue-600 text-white shadow-lg"
+              ? "bg-brand-teal-500 text-white shadow-lg"
               : "bg-white text-gray-700 hover:bg-gray-50"
           }`}
         >

@@ -84,7 +84,7 @@ const AdminDashboard: React.FC = () => {
           <input name="features" value={newProduct.features.join(',')} onChange={e => setNewProduct(prev => ({ ...prev, features: e.target.value.split(',').map(s => s.trim()) }))} placeholder="Features (comma separated)" className="border p-2 rounded" />
           <textarea name="description" value={newProduct.description} onChange={handleInputChange} placeholder="Description" className="border p-2 rounded col-span-2" />
         </div>
-        <button onClick={handleAddProduct} className="mt-4 px-4 py-2 bg-brand-blue text-white rounded hover:bg-brand-blue-dark transition">Add Product</button>
+        <button onClick={handleAddProduct} className="mt-4 px-4 py-2 bg-brand-teal-500 text-white rounded hover:bg-brand-teal-600 transition">Add Product</button>
       </div>
       <div className="border p-4 rounded-lg bg-gray-50">
         <h2 className="text-xl font-semibold mb-2">Product List</h2>
@@ -101,7 +101,7 @@ const AdminDashboard: React.FC = () => {
           </thead>
           <tbody>
             {products.map(product => (
-              <tr key={product.id} className={selectedProductId === product.id ? 'bg-brand-light-cyan' : ''}>
+              <tr key={product.id} className={selectedProductId === product.id ? 'bg-brand-teal-50' : ''}>
                 <td className="p-2">{product.id}</td>
                 <td className="p-2">{product.name}</td>
                 <td className="p-2">{product.sku}</td>

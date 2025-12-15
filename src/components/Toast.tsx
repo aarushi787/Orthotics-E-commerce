@@ -26,7 +26,7 @@ const Toast: React.FC<ToastProps> = ({ message, type = 'success', isVisible }) =
 
   const typeInfo = {
     success: { icon: CheckIcon, styles: 'bg-green-500' },
-    info: { icon: InfoIcon, styles: 'bg-blue-500' },
+    info: { icon: InfoIcon, styles: 'bg-brand-teal-*500' },
     error: { icon: ErrorIcon, styles: 'bg-red-500' },
     warning: { icon: WarningIcon, styles: 'bg-amber-500' },
   };

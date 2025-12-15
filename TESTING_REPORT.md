@@ -48,7 +48,7 @@
 ### 1.4 Available Sizes Filter ✅
 **Status:** Working
 - [x] Size buttons (pill-shaped) work correctly
-- [x] Active size highlighted with brand-accent color
+- [x] Active size highlighted with brand-teal-500 color
 - [x] Multiple sizes selectable
 - [x] Products filtered by selected sizes
 - [x] Size badges appear in active filters

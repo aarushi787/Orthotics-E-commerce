@@ -51,7 +51,7 @@ export default function Users() {
 
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="bg-white p-4 rounded-lg shadow-lg">
-          <div className="text-2xl font-bold text-blue-600">{users.length}</div>
+          <div className="text-2xl font-bold text-brand-teal-500">{users.length}</div>
           <div className="text-sm text-gray-600">Total Users</div>
         </div>
         <div className="bg-white p-4 rounded-lg shadow-lg">
@@ -105,7 +105,7 @@ export default function Users() {
                     <td className="px-6 py-4">{user.email}</td>
                     <td className="px-6 py-4">{user.displayName || "-"}</td>
                     <td className="px-6 py-4">
-                      <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
+                      <span className="px-3 py-1 bg-brand-teal-*100 text-brand-teal-*700 rounded-full text-sm font-semibold">
                         {user.orders || 0}
                       </span>
                     </td>

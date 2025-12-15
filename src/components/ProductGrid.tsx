@@ -24,7 +24,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, wishlist, onToggleW
                         <label htmlFor="sort-by" className="text-sm text-gray-600">Sort by:</label>
                         <select 
                             id="sort-by" 
-                            className="text-sm font-medium border-gray-300 rounded-md shadow-sm focus:border-brand-accent focus:ring-brand-accent"
+                            className="text-sm font-medium border-gray-300 rounded-md shadow-sm focus:border-brand-teal-300 focus:ring-brand-teal-400"
                             value={sortOption}
                             onChange={(e) => onSortChange(e.target.value)}
                         >
@@ -58,7 +58,7 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, wishlist, onToggleW
                     <p className="text-gray-500 mt-2 mb-6">Try adjusting your filters or search query to find what you're looking for.</p>
                      <button 
                         onClick={onClearFilters}
-                        className="bg-brand-blue text-white font-bold py-2 px-5 rounded-lg hover:bg-brand-blue-dark transition-colors"
+                        className="bg-brand-teal-500 text-white font-bold py-2 px-5 rounded-lg hover:bg-brand-teal-600 transition-colors"
                     >
                         Clear All Filters
                     </button>

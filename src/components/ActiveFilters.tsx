@@ -42,7 +42,7 @@ const ActiveFilters: React.FC<ActiveFiltersProps> = ({ filters, searchQuery, onR
     }
 
   return (
-    <div className="mb-4 bg-blue-50 border border-blue-200 p-3 rounded-lg">
+    <div className="mb-4 bg-brand-teal-*50 border border-blue-200 p-3 rounded-lg">
       <div className="flex flex-wrap items-center gap-2">
         <span className="text-sm font-semibold text-gray-700 mr-2">Active Filters:</span>
         {activeFilters.map(filter => (

@@ -195,7 +195,7 @@ export default function Products() {
               inStock: true,
             });
           }}
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          className="px-4 py-2 bg-brand-teal-500 text-white rounded hover:bg-brand-teal-600"
         >
           {showForm ? "Cancel" : "Add New Product"}
         </button>
@@ -420,7 +420,7 @@ export default function Products() {
                     <td className="px-6 py-4 flex gap-2">
                       <button
                         onClick={() => handleEdit(product)}
-                        className="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600"
+                        className="px-3 py-1 bg-brand-teal-*500 text-white rounded text-sm hover:bg-brand-teal-500"
                       >
                         Edit
                       </button>
@@ -543,7 +543,7 @@ export default function Products() {
             </div>
             <div className="mt-4 flex justify-end gap-2">
               <button onClick={() => setSelectedProduct(null)} className="px-4 py-2 bg-gray-200 rounded">Close</button>
-              <button onClick={() => { setSelectedProduct(null); handleEdit(selectedProduct); }} className="px-4 py-2 bg-blue-600 text-white rounded">Edit</button>
+              <button onClick={() => { setSelectedProduct(null); handleEdit(selectedProduct); }} className="px-4 py-2 bg-brand-teal-500 text-white rounded">Edit</button>
             </div>
           </div>
         </div>

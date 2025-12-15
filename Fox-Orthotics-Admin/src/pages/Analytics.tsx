@@ -115,7 +115,7 @@ export default function Analytics() {
               <div key={idx} className="flex items-center justify-between">
                 <span className="text-gray-700">{item.category}</span>
                 <div className="flex items-center gap-2">
-                  <div className="bg-blue-200 h-6 rounded" style={{ width: `${(item.count / analytics.totalProducts) * 200}px` }}></div>
+                  <div className="bg-brand-teal-*200 h-6 rounded" style={{ width: `${(item.count / analytics.totalProducts) * 200}px` }}></div>
                   <span className="text-sm font-semibold">{item.count}</span>
                 </div>
               </div>

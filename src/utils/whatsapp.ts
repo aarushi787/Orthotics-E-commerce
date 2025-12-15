@@ -54,8 +54,11 @@ export const generateCustomerMessage = (name: string, email: string, message: st
  */
 export const getWhatsAppChatLink = (phoneNumber: string, message?: string): string => {
   const formattedPhone = formatWhatsAppNumber(phoneNumber);
-  const encoded = message ? encodeURIComponent(message) : "";
-  return `https://wa.me/${formattedPhone}${encoded ? `?text=${encoded}` : ""}`;
+  if (message) {
+    const encoded = encodeURIComponent(message);
+    return `https://wa.me/${formattedPhone}?text=${encoded}`;
+  }
+  return `https://wa.me/${formattedPhone}`;
 };
 
 /**

@@ -28,7 +28,7 @@ const ProductListingPage: React.FC<ProductListingPageProps> = (props) => {
         <>
             <div className="flex items-center justify-between mb-4">
                 <div className="text-sm text-gray-500">
-                    <a href="#/" className="hover:text-brand-blue cursor-pointer">Home</a> / <span className="text-gray-800 font-medium">{props.pageTitle}</span>
+                    <a href="#/" className="hover:text-brand-teal-500 cursor-pointer">Home</a> / <span className="text-gray-800 font-medium">{props.pageTitle}</span>
                 </div>
                 <button 
                     onClick={() => setIsMobileFiltersOpen(true)}

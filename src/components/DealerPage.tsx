@@ -18,7 +18,7 @@ const DealerPage: React.FC = () => {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Benefits of Partnership</h2>
             <ul className="space-y-6">
               <li className="flex items-start gap-4">
-                <div className="bg-brand-accent-light text-brand-accent rounded-full p-2 mt-1">
+                <div className="bg-brand-teal-50 text-brand-teal-500 rounded-full p-2 mt-1">
                     <ShieldCheckIcon className="w-6 h-6"/>
                 </div>
                 <div>
@@ -27,7 +27,7 @@ const DealerPage: React.FC = () => {
                 </div>
               </li>
                <li className="flex items-start gap-4">
-                 <div className="bg-brand-accent-light text-brand-accent rounded-full p-2 mt-1">
+                 <div className="bg-brand-teal-50 text-brand-teal-500 rounded-full p-2 mt-1">
                     <TruckIcon className="w-6 h-6"/>
                  </div>
                 <div>
@@ -36,7 +36,7 @@ const DealerPage: React.FC = () => {
                 </div>
               </li>
                <li className="flex items-start gap-4">
-                 <div className="bg-brand-accent-light text-brand-accent rounded-full p-2 mt-1">
+                 <div className="bg-brand-teal-50 text-brand-teal-500 rounded-full p-2 mt-1">
                     <UsersIcon className="w-6 h-6"/>
                  </div>
                 <div>
@@ -53,26 +53,26 @@ const DealerPage: React.FC = () => {
             <form action="#" method="POST" className="space-y-4">
               <div>
                 <label htmlFor="company-name" className="block text-sm font-medium text-gray-700">Company Name</label>
-                <input type="text" name="company-name" id="company-name" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-accent focus:border-brand-accent"/>
+                <input type="text" name="company-name" id="company-name" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-teal-400 focus:border-brand-teal-300"/>
               </div>
               <div>
                 <label htmlFor="contact-person" className="block text-sm font-medium text-gray-700">Contact Person</label>
-                <input type="text" name="contact-person" id="contact-person" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-accent focus:border-brand-accent"/>
+                <input type="text" name="contact-person" id="contact-person" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-teal-400 focus:border-brand-teal-300"/>
               </div>
                <div>
                 <label htmlFor="dealer-email" className="block text-sm font-medium text-gray-700">Email Address</label>
-                <input type="email" name="dealer-email" id="dealer-email" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-accent focus:border-brand-accent"/>
+                <input type="email" name="dealer-email" id="dealer-email" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-teal-400 focus:border-brand-teal-300"/>
               </div>
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700">Phone Number</label>
-                <input type="tel" name="phone" id="phone" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-accent focus:border-brand-accent"/>
+                <input type="tel" name="phone" id="phone" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-teal-400 focus:border-brand-teal-300"/>
               </div>
               <div>
                 <label htmlFor="comments" className="block text-sm font-medium text-gray-700">Comments / Questions</label>
-                <textarea id="comments" name="comments" rows={3} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-accent focus:border-brand-accent"></textarea>
+                <textarea id="comments" name="comments" rows={3} className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-teal-400 focus:border-brand-teal-300"></textarea>
               </div>
               <div>
-                <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brand-blue hover:bg-brand-blue-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue">
+                <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brand-teal-500 hover:bg-brand-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal-400">
                   Submit Application
                 </button>
               </div>

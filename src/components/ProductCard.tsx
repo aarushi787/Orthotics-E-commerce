@@ -114,7 +114,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
         <a
           href={`#/product/${id}`}
-          className="font-bold text-gray-800 mt-1 hover:text-brand-blue"
+          className="font-bold text-gray-800 mt-1 hover:text-brand-teal-500"
         >
           {name}
         </a>
@@ -132,7 +132,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
         {/* PRICE */}
         <div className="mt-4">
-          <p className="text-lg font-bold text-brand-blue">₹{p}</p>
+          <p className="text-lg font-bold text-brand-teal-500">₹{p}</p>
           {discount > 5 && (
             <p className="text-xs text-gray-400 line-through">₹{mrp}</p>
           )}
@@ -162,7 +162,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
           <button
             disabled={!inStock}
             onClick={() => onAddToCart(product, 50)}
-            className="flex-1 flex items-center justify-center gap-1 rounded-lg bg-brand-blue text-white py-2 hover:bg-brand-blue-dark disabled:bg-gray-300 transition"
+            className="flex-1 flex items-center justify-center gap-1 rounded-lg bg-brand-teal-500 text-white py-2 hover:bg-brand-teal-600 disabled:bg-gray-300 transition"
             title={inStock ? "Add to cart" : "Out of stock"}
           >
             <ShoppingCartIcon className="w-5" /> Add

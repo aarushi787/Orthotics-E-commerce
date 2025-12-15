@@ -42,7 +42,7 @@ return(
   <input type="number" min={1} max={5} value={stars} onChange={e=>setStars(+e.target.value)}
     className="w-16 border p-2 ml-3"/>
 
-  <button className="block bg-brand-blue hover:bg-brand-blue-dark text-white px-4 py-2 rounded mt-3 transition"
+  <button className="block bg-brand-teal-500 hover:bg-brand-teal-600 text-white px-4 py-2 rounded mt-3 transition"
     onClick={submit}>Submit Review</button>
 
   {/* List */}

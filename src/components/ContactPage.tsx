@@ -19,18 +19,18 @@ const ContactPage: React.FC = () => {
             <form action="#" method="POST" className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">Full Name</label>
-                <input type="text" name="name" id="name" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-accent focus:border-brand-accent"/>
+                <input type="text" name="name" id="name" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-teal-400 focus:border-brand-teal-300"/>
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email Address</label>
-                <input type="email" name="email" id="email" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-accent focus:border-brand-accent"/>
+                  <input type="email" name="email" id="email" required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-teal-400 focus:border-brand-teal-300"/>
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
-                <textarea id="message" name="message" rows={4} required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-accent focus:border-brand-accent"></textarea>
+                  <textarea id="message" name="message" rows={4} required className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand-teal-400 focus:border-brand-teal-300"></textarea>
               </div>
               <div>
-                <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brand-blue hover:bg-brand-blue-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue">
+                <button type="submit" className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brand-teal-500 hover:bg-brand-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-teal-400">
                   Send Message
                 </button>
               </div>
@@ -43,15 +43,15 @@ const ContactPage: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Contact Information</h3>
               <ul className="space-y-4 text-gray-600">
                 <li className="flex items-center gap-3">
-                    <MailIcon className="w-6 h-6 text-brand-blue"/>
-                    <a href="mailto:info@brsurgical.com" className="hover:text-brand-blue">info@brsurgical.com</a>
+                    <MailIcon className="w-6 h-6 text-brand-teal-500"/>
+                    <a href="mailto:info@brsurgical.com" className="hover:text-brand-teal-500">info@brsurgical.com</a>
                 </li>
                  <li className="flex items-center gap-3">
-                    <PhoneIcon className="w-6 h-6 text-brand-blue"/>
-                    <a href="tel:+917011770526" className="hover:text-brand-blue">+91 70117 70526</a>
+                    <PhoneIcon className="w-6 h-6 text-brand-teal-500"/>
+                    <a href="tel:+917011770526" className="hover:text-brand-teal-500">+91 70117 70526</a>
                 </li>
                 <li className="flex items-start gap-3">
-                    <LocationMarkerIcon className="w-6 h-6 text-brand-blue flex-shrink-0 mt-1"/>
+                    <LocationMarkerIcon className="w-6 h-6 text-brand-teal-500 flex-shrink-0 mt-1"/>
                     <span>B-59, Krishna Kunj Gali, North Ghonda, Delhi-110053</span>
                 </li>
               </ul>

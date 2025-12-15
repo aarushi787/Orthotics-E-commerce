@@ -42,7 +42,7 @@ const Login: React.FC = () => {
         {error && <div className="text-red-600 mb-3">{error}</div>}
         <input type="email" required placeholder="Email" className="w-full p-2 border mb-3" value={email} onChange={e => setEmail(e.target.value)} />
         <input type="password" required placeholder="Password" className="w-full p-2 border mb-4" value={password} onChange={e => setPassword(e.target.value)} />
-        <button className="w-full bg-blue-600 text-white py-2 rounded">Login</button>
+        <button className="w-full bg-brand-teal-500 text-white py-2 rounded">Login</button>
       </form>
     </div>
   );

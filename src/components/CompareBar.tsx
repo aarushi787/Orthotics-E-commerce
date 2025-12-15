@@ -13,7 +13,7 @@ export default function CompareBar({ products }: { products:Product[] }) {
   if(items.length===0) return null;
 
   return (
-    <div className="fixed bottom-3 right-3 bg-brand-blue text-white shadow-xl px-5 py-3 rounded-xl cursor-pointer">
+    <div className="fixed bottom-3 right-3 bg-brand-teal-500 text-white shadow-xl px-5 py-3 rounded-xl cursor-pointer">
       Compare ({items.length})
     </div>
   );

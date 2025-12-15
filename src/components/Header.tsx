@@ -62,12 +62,12 @@ const Header: React.FC<HeaderProps> = ({
             <div className="bg-gray-100 text-gray-600 text-xs py-2">
                 <div className="container mx-auto px-4 flex justify-between items-center">
                     <div className="flex items-center gap-4">
-                        <a href="tel:+917011770526" className="flex items-center gap-1 hover:text-brand-blue">
+                        <a href="tel:+917011770526" className="flex items-center gap-1 hover:text-brand-teal-500">
                             <PhoneIcon className="w-4 h-4" />
                             <span>+91 70117 70526</span>
                         </a>
 
-                        <a href="mailto:info@brsurgical.com" className="flex items-center gap-1 hover:text-brand-blue">
+                        <a href="mailto:info@brsurgical.com" className="flex items-center gap-1 hover:text-brand-teal-500">
                             <MailIcon className="w-4 h-4" />
                             <span className="hidden sm:inline">info@brsurgical.com</span>
                         </a>
@@ -94,7 +94,7 @@ const Header: React.FC<HeaderProps> = ({
                             />
                             <span className="text-xs font-semibold text-gray-700">WhatsApp</span>
                         </button>
-                        <a href="#/dealer" className="hover:text-brand-blue font-medium">
+                        <a href="#/dealer" className="hover:text-brand-teal-500 font-medium">
                             Become a Dealer
                         </a>
                     </div>
@@ -102,12 +102,12 @@ const Header: React.FC<HeaderProps> = ({
             </div>
 
             {/* ---------- MAIN HEADER ---------- */}
-            <div className="bg-brand-blue">
+            <div className="bg-brand-teal-500">
                 <div className="container mx-auto px-4 py-4 flex justify-between items-center">
 
                     {/* ---------- LOGO + BRAND NAME ---------- */}
                     <a href="#/" className="flex items-center gap-3">
-                        <div className="bg-brand-blue-dark p-2 rounded-full">
+                        <div className="bg-brand-teal-600 p-2 rounded-full">
                             <img
                                 src={logo}
                                 alt="Fox Orthotics Logo"
@@ -136,7 +136,7 @@ const Header: React.FC<HeaderProps> = ({
                             />
 
                             <button 
-                                className="absolute right-0 inset-y-0 bg-brand-blue-dark px-3 rounded-r-md text-white"
+                                className="absolute right-0 inset-y-0 bg-brand-teal-600 px-3 rounded-r-md text-white"
                                 title="Search products"
                                 aria-label="Search"
                             >
@@ -191,20 +191,20 @@ const Header: React.FC<HeaderProps> = ({
             {/* ---------- NAVIGATION BAR ---------- */}
             <nav className="border-b bg-white hidden md:block">
                 <div className="container mx-auto px-4 flex items-center gap-1">
-                    <a href="#/" className="px-4 py-3 font-semibold hover:bg-brand-light-cyan">Home</a>
-                    <a href="#/products" className="px-4 py-3 font-semibold bg-brand-light-cyan text-brand-blue">All Products</a>
+                    <a href="#/" className="px-4 py-3 font-semibold hover:bg-brand-teal-50">Home</a>
+                    <a href="#/products" className="px-4 py-3 font-semibold bg-brand-teal-50 text-brand-teal-500">All Products</a>
 
                     {CATEGORIES.slice(0, 5).map((cat) => (
                         <a
                             key={cat.name}
                             href={`#/category/${slugify(cat.name)}`}
-                            className="px-4 py-3 hover:bg-brand-light-cyan text-gray-700 font-medium"
+                            className="px-4 py-3 hover:bg-brand-teal-50 text-gray-700 font-medium"
                         >
                             {cat.name}
                         </a>
                     ))}
 
-                    <a href="#/dealer" className="ml-auto text-brand-accent font-bold px-4 py-3 hover:bg-brand-light-cyan">
+                    <a href="#/dealer" className="ml-auto text-brand-teal-500 font-bold px-4 py-3 hover:bg-brand-teal-50">
                         Bulk Orders
                     </a>
                 </div>

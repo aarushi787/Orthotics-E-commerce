@@ -41,7 +41,7 @@ const WishlistPage: React.FC<WishlistPageProps> = ({ wishlist, allProducts, onTo
                     <p className="text-gray-500 mt-2 mb-6">
                         Looks like you haven't added any products to your wishlist yet.
                     </p>
-                    <a href="#/" className="inline-block bg-brand-blue text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-blue-dark transition-colors">
+                    <a href="#/" className="inline-block bg-brand-teal-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-brand-teal-600 transition-colors">
                         Start Shopping
                     </a>
                 </div>

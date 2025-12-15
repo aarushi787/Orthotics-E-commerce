@@ -97,8 +97,8 @@ const AIAdvisor: React.FC<AIAdvisorProps> = ({
         {/* Header */}
         <div className="flex-shrink-0 p-6 flex justify-between items-center border-b">
           <div className="flex items-center gap-3">
-            <div className="bg-brand-accent-light p-2 rounded-full">
-              <AIIcon className="w-6 h-6 text-brand-accent" />
+            <div className="bg-brand-teal-50 p-2 rounded-full">
+              <AIIcon className="w-6 h-6 text-brand-teal-500" />
             </div>
             <h2 className="text-xl font-bold text-gray-900">AI Product Finder</h2>
           </div>
@@ -128,7 +128,7 @@ const AIAdvisor: React.FC<AIAdvisorProps> = ({
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Enter your query here..."
                 className="w-full max-w-lg h-32 p-3 border border-gray-300 rounded-lg 
-                           focus:ring-2 focus:ring-brand-accent focus:border-brand-accent"
+                           focus:ring-2 focus:ring-brand-teal-400 focus:border-brand-teal-300"
                 disabled={isLoading}
               />
 
@@ -143,7 +143,7 @@ const AIAdvisor: React.FC<AIAdvisorProps> = ({
           {/* Loading UI */}
           {isLoading && (
             <div className="flex flex-col items-center justify-center h-full text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-accent"></div>
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-teal-500"></div>
               <p className="mt-4 text-gray-600 font-medium">Thinking...</p>
               <p className="text-sm text-gray-500">
                 Analyzing your needs to find the perfect match.
@@ -196,8 +196,8 @@ const AIAdvisor: React.FC<AIAdvisorProps> = ({
             <button
               onClick={handleFindProducts}
               disabled={isLoading}
-              className="w-full bg-brand-blue text-white font-bold py-3 px-4 rounded-lg 
-                         hover:bg-brand-blue-dark transition-colors 
+              className="w-full bg-brand-teal-500 text-white font-bold py-3 px-4 rounded-lg 
+                         hover:bg-brand-teal-600 transition-colors 
                          disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isLoading ? "Searching..." : "Find Products"}

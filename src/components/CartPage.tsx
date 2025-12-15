@@ -52,14 +52,14 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
     return (
       <div className="flex items-center justify-center" style={{minHeight: '50vh'}}>
         <div className="text-center p-10 bg-white rounded-lg shadow-md border border-gray-200 max-w-md mx-auto">
-          <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-brand-accent-light mb-6">
-            <ShoppingCartIcon className="w-8 h-8 text-brand-accent" />
+          <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-brand-teal-50 mb-6">
+            <ShoppingCartIcon className="w-8 h-8 text-brand-teal-500" />
           </div>
           <h3 className="text-2xl font-bold text-gray-900">Your cart is empty</h3>
           <p className="text-gray-600 mt-2 mb-8">
             Looks like you haven't added any products to your cart yet.
           </p>
-          <a href="#/" className="inline-block bg-brand-blue text-white font-bold py-3 px-8 rounded-lg hover:bg-brand-blue-dark transition-all duration-300 transform hover:scale-105">
+          <a href="#/" className="inline-block bg-brand-teal-500 text-white font-bold py-3 px-8 rounded-lg hover:bg-brand-teal-600 transition-all duration-300 transform hover:scale-105">
             Continue Shopping
           </a>
         </div>
@@ -88,7 +88,7 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                         <img
                           src={product.imageUrls && product.imageUrls[0] ? (product.imageUrls[0].startsWith('/') ? product.imageUrls[0] : `/${product.imageUrls[0]}`) : '/images/no-image.png'}
                           alt={product.name}
-                          className="w-24 h-24 object-cover rounded-lg border border-gray-200 hover:border-brand-blue transition-colors"
+                          className="w-24 h-24 object-cover rounded-lg border border-gray-200 hover:border-brand-teal-500 transition-colors"
                           onError={(e) => {
                             const img = e.target as HTMLImageElement;
                             if (img.dataset.attempt === '1') {
@@ -106,7 +106,7 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                         />
                       </a>
                       <div className="flex-grow min-w-0">
-                        <a href={`#/product/${product.id}`} className="block font-bold text-gray-900 hover:text-brand-blue transition-colors truncate">{product.name}</a>
+                        <a href={`#/product/${product.id}`} className="block font-bold text-gray-900 hover:text-brand-teal-500 transition-colors truncate">{product.name}</a>
                         <p className="text-sm text-gray-600 mt-1">SKU: {product.sku}</p>
                         <button onClick={() => onRemoveItem(product.id)} className="text-xs text-red-600 hover:text-red-700 font-medium mt-2 hover:underline">
                           Remove Item
@@ -155,7 +155,7 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                   </div>
                   <div className="flex justify-between pt-2">
                     <span className="text-lg font-bold text-gray-900">Total</span>
-                    <span className="text-lg font-bold text-brand-blue">₹{total.toFixed(2)}</span>
+                    <span className="text-lg font-bold text-brand-teal-500">₹{total.toFixed(2)}</span>
                   </div>
 
                   {checkoutError && (
@@ -166,7 +166,7 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
 
                   <button
                     onClick={() => setShowCheckoutForm(true)}
-                    className="w-full mt-6 bg-brand-blue text-white font-bold py-3 rounded-lg hover:bg-brand-blue-dark transition-colors duration-200"
+                    className="w-full mt-6 bg-brand-teal-500 text-white font-bold py-3 rounded-lg hover:bg-brand-teal-600 transition-colors duration-200"
                   >
                     Proceed to Checkout
                   </button>
@@ -189,7 +189,7 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
         {showCheckoutForm && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
             <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-              <div className="sticky top-0 bg-gradient-to-r from-brand-blue to-brand-accent text-white p-6 flex justify-between items-center">
+              <div className="sticky top-0 bg-gradient-to-r from-[#308495] to-[#04BFBF] text-white p-6 flex justify-between items-center">
                 <h2 className="text-2xl font-bold">Checkout Details</h2>
                 <button onClick={() => setShowCheckoutForm(false)} className="text-2xl hover:opacity-80">×</button>
               </div>
@@ -292,31 +292,31 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name *</label>
-                    <input type="text" required value={customerDetails.name} onChange={(e) => setCustomerDetails({...customerDetails, name: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="John Doe" />
+                    <input type="text" required value={customerDetails.name} onChange={(e) => setCustomerDetails({...customerDetails, name: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal-500 focus:border-transparent outline-none" placeholder="John Doe" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Email *</label>
-                    <input type="email" required value={customerDetails.email} onChange={(e) => setCustomerDetails({...customerDetails, email: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="john@example.com" />
+                    <input type="email" required value={customerDetails.email} onChange={(e) => setCustomerDetails({...customerDetails, email: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal-500 focus:border-transparent outline-none" placeholder="john@example.com" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Phone Number *</label>
-                    <input type="tel" required value={customerDetails.phone} onChange={(e) => setCustomerDetails({...customerDetails, phone: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="+91 9999999999" />
+                    <input type="tel" required value={customerDetails.phone} onChange={(e) => setCustomerDetails({...customerDetails, phone: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal-500 focus:border-transparent outline-none" placeholder="+91 9999999999" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Pincode *</label>
-                    <input type="text" required value={customerDetails.pincode} onChange={(e) => setCustomerDetails({...customerDetails, pincode: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="110053" />
+                    <input type="text" required value={customerDetails.pincode} onChange={(e) => setCustomerDetails({...customerDetails, pincode: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal-500 focus:border-transparent outline-none" placeholder="110053" />
                   </div>
                   <div className="md:col-span-2">
                     <label className="block text-sm font-semibold text-gray-700 mb-1">Address *</label>
-                    <input type="text" required value={customerDetails.address} onChange={(e) => setCustomerDetails({...customerDetails, address: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="Street address" />
+                    <input type="text" required value={customerDetails.address} onChange={(e) => setCustomerDetails({...customerDetails, address: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal-500 focus:border-transparent outline-none" placeholder="Street address" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">City *</label>
-                    <input type="text" required value={customerDetails.city} onChange={(e) => setCustomerDetails({...customerDetails, city: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="Delhi" />
+                    <input type="text" required value={customerDetails.city} onChange={(e) => setCustomerDetails({...customerDetails, city: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal-500 focus:border-transparent outline-none" placeholder="Delhi" />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-1">State *</label>
-                    <input type="text" required value={customerDetails.state} onChange={(e) => setCustomerDetails({...customerDetails, state: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none" placeholder="Delhi" />
+                    <input type="text" required value={customerDetails.state} onChange={(e) => setCustomerDetails({...customerDetails, state: e.target.value})} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-teal-500 focus:border-transparent outline-none" placeholder="Delhi" />
                   </div>
                 </div>
 
@@ -327,10 +327,10 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                 )}
 
                 <div className="flex gap-3 pt-4">
-                  <button type="button" onClick={() => setShowCheckoutForm(false)} className="flex-1 px-6 py-3 border-2 border-brand-blue text-brand-blue font-bold rounded-lg hover:bg-brand-light-cyan transition-colors">
+                  <button type="button" onClick={() => setShowCheckoutForm(false)} className="flex-1 px-6 py-3 border-2 border-brand-teal-500 text-brand-teal-500 font-bold rounded-lg hover:bg-brand-teal-50 transition-colors">
                     Cancel
                   </button>
-                  <button type="submit" className="flex-1 px-6 py-3 bg-brand-blue text-white font-bold rounded-lg hover:bg-brand-blue-dark transition-colors">
+                  <button type="submit" className="flex-1 px-6 py-3 bg-brand-teal-500 text-white font-bold rounded-lg hover:bg-brand-teal-600 transition-colors">
                     Proceed to Payment
                   </button>
                 </div>

@@ -69,7 +69,7 @@
 //           <button
 //             type="submit"
 //             disabled={loading}
-//             className="w-full bg-brand-blue text-white py-2 rounded-md font-semibold hover:opacity-95"
+//             className="w-full bg-brand-teal-500 text-white py-2 rounded-md font-semibold hover:opacity-95"
 //           >
 //             {loading ? "Signing in…" : "Sign in"}
 //           </button>
@@ -145,7 +145,7 @@ const AdminLogin: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full px-4 py-2.5 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition outline-none"
+              className="w-full px-4 py-2.5 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-brand-teal-500 focus:border-brand-teal-500 transition outline-none"
               placeholder="admin@example.com"
             />
           </div>
@@ -160,7 +160,7 @@ const AdminLogin: React.FC = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full px-4 py-2.5 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition outline-none"
+              className="w-full px-4 py-2.5 border rounded-lg bg-gray-50 focus:ring-2 focus:ring-brand-teal-500 focus:border-brand-teal-500 transition outline-none"
               placeholder="••••••••"
             />
           </div>
@@ -174,7 +174,7 @@ const AdminLogin: React.FC = () => {
 
             <button
               type="button"
-              className="text-brand-blue hover:underline"
+              className="text-brand-teal-500 hover:underline"
             >
               Forgot your password?
             </button>
@@ -184,7 +184,7 @@ const AdminLogin: React.FC = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-brand-blue text-white py-3 rounded-lg font-semibold text-[15px] hover:bg-brand-blue-dark transition disabled:opacity-60"
+            className="w-full bg-brand-teal-500 text-white py-3 rounded-lg font-semibold text-[15px] hover:bg-brand-teal-600 transition disabled:opacity-60"
           >
             {loading ? "Signing in…" : "Sign in"}
           </button>

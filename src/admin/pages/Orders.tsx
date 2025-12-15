@@ -70,7 +70,7 @@ const Orders: React.FC = () => {
 
                 <div>
                   <button
-                    className="bg-blue-600 text-white px-3 py-2 rounded"
+                    className="bg-brand-teal-500 text-white px-3 py-2 rounded"
                     onClick={() => updateStatus(o.id, "Delivered")}
                   >
                     Mark Delivered
