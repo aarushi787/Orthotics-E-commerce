@@ -1,11 +1,11 @@
 import { FiltersState } from './types';
 
 export const CATEGORIES = [
-    { name: 'Lumbar & Back Support', count: 23 },
-    { name: 'Wrist & Hand Braces', count: 22 },
-    { name: 'Knee Support & Braces', count: 20 },
-    { name: 'Ankle & Foot Support', count: 14 },
-    { name: 'Mobility & Support Aids', count: 12 },
+    { name: 'Lumbar & Back Support', count: 31 },
+    { name: 'Wrist & Hand Braces', count: 31 },
+    { name: 'Knee Support & Braces', count: 22 },
+    { name: 'Ankle & Foot Support', count: 15 },
+    { name: 'Mobility & Support Aids', count: 19 },
     { name: 'Cervical Collars', count: 5 },
 ];
 

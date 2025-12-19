@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Product } from '../types';
+import { CATEGORIES } from '../constants';
 
 interface HomePageProps {
   products: Product[];
@@ -31,15 +32,8 @@ const HomePage: React.FC<HomePageProps> = ({
       .slice(0, 4);
     setTopRatedProducts(topRated);
 
-    // Get unique categories
-    const cats = [
-      ...new Set(products.map((p) => p.category)),
-    ].map((cat) => ({
-      name: cat,
-      count: products.filter((p) => p.category === cat).length,
-      icon: '🏥',
-    }));
-    setCategories(cats.slice(0, 6));
+    // Use predefined categories with correct counts
+    setCategories(CATEGORIES.map(cat => ({ ...cat, icon: '🏥' })));
   }, [products]);
 
   const slugify = (text: string) =>
@@ -169,21 +163,13 @@ const HomePage: React.FC<HomePageProps> = ({
       {/* ============ COMBO DEAL POSTER ============ */}
       <div className="py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="relative rounded-xl overflow-hidden shadow-lg">
+          <a href="#/products" className="relative rounded-xl overflow-hidden shadow-lg block hover:shadow-2xl transition-shadow">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.firebasestorage.app/o/images%2FCombo.jpg?alt=media&token=85c7909a-0220-4bb5-afd2-ac5d5a795316"
               alt="Combo Deals"
-              className="w-full h-auto object-cover max-h-96"
+              className="w-full h-auto object-cover max-h-96 hover:opacity-95 transition-opacity"
             />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <a
-                href="#/products"
-                className="bg-brand-teal-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-brand-teal-600 transition-all shadow-lg"
-              >
-                Explore Combo Deals
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
 
@@ -209,21 +195,13 @@ const HomePage: React.FC<HomePageProps> = ({
       {/* ============ DEAL POSTER ============ */}
       <div className="py-8 md:py-12 bg-brand-teal-50">
         <div className="container mx-auto px-4">
-          <div className="relative rounded-xl overflow-hidden shadow-lg">
+          <a href="#/products" className="relative rounded-xl overflow-hidden shadow-lg block hover:shadow-2xl transition-shadow">
             <img
               src="https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.firebasestorage.app/o/images%2FDeal.jpg?alt=media&token=dc068c91-f6c1-44db-9854-6522895f6686"
               alt="Special Deals"
-              className="w-full h-auto object-cover max-h-96"
+              className="w-full h-auto object-cover max-h-96 hover:opacity-95 transition-opacity"
             />
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-              <a
-                href="#/products"
-                className="bg-brand-teal-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-brand-teal-600 transition-all shadow-lg"
-              >
-                Shop Special Deals
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
 
