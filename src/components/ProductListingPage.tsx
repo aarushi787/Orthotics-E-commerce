@@ -23,12 +23,32 @@ interface ProductListingPageProps {
 
 const ProductListingPage: React.FC<ProductListingPageProps> = (props) => {
     const [isMobileFiltersOpen, setIsMobileFiltersOpen] = useState(false);
+    // Determine current category from hash (if any)
+    const getCurrentCategory = () => {
+        if (typeof window === 'undefined') return '';
+        const hash = window.location.hash || '';
+        if (!hash.startsWith('#/category/')) return '';
+        const parts = hash.split('/');
+        if (!parts[2]) return '';
+        const restored = parts[2].replace(/-and-/g, ' & ').replace(/-/g, ' ');
+        return restored.replace(/\b\w/g, (l) => l.toUpperCase());
+    };
+    const currentCategory = getCurrentCategory();
+
+    const CATEGORY_POSTERS: Record<string,string> = {
+        'Lumbar & Back Support': 'https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.firebasestorage.app/o/images%2FLumbar.jpg?alt=media',
+        'Wrist & Hand Braces': 'https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.firebasestorage.app/o/images%2FWrist.jpg?alt=media',
+        'Knee Support & Braces': 'https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.firebasestorage.app/o/images%2FKnee.jpg?alt=media',
+        'Ankle & Foot Support': 'https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.firebasestorage.app/o/images%2FAnkle.jpg?alt=media',
+        'Mobility & Support Aids': 'https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.firebasestorage.app/o/images%2FMobility.jpg?alt=media',
+    };
+    const categoryBanner = CATEGORY_POSTERS[currentCategory] || '';
 
     return (
         <>
             <div className="flex items-center justify-between mb-4">
                 <div className="text-sm text-gray-500">
-                    <a href="#/" className="hover:text-brand-teal-500 cursor-pointer">Home</a> / <span className="text-gray-800 font-medium">{props.pageTitle}</span>
+                    <a href="#/" className="hover:text-brand-teal-500 cursor-pointer">Home</a> / <span className="text-gray-800 font-medium">{currentCategory || props.pageTitle}</span>
                 </div>
                 <button 
                     onClick={() => setIsMobileFiltersOpen(true)}
@@ -88,6 +108,7 @@ const ProductListingPage: React.FC<ProductListingPageProps> = (props) => {
                     sortOption={props.sortOption}
                     onSortChange={props.onSortChange}
                     onClearFilters={props.onClearFilters}
+                    categoryBanner={categoryBanner}
                 />
               </div>
             </div>

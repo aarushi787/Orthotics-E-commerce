@@ -106,37 +106,17 @@ const HomePage: React.FC<HomePageProps> = ({
   return (
     <div className="bg-white">
       {/* ============ HERO SLIDER WITH POSTERS ============ */}
-      <div className="relative bg-gradient-to-r from-[#308495] to-[#04BFBF] text-white py-8 md:py-16">
+      {/* Inline slider component to keep file self-contained */}
+      {/* <HeroSliderInternal /> */}
+      <div className="py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h1 className="text-3xl md:text-5xl font-bold mb-4">Premium Orthopedic Solutions</h1>
-              <p className="text-lg md:text-xl mb-6 opacity-90">
-                Quality orthopedic products for better health and comfort. Shop our exclusive collection of medical-grade supports and braces.
-              </p>
-              <div className="flex gap-4">
-                <a
-                  href="#/products"
-                  className="bg-brand-teal-500 text-white px-6 py-3 rounded-lg font-bold shadow-lg hover:shadow-xl hover:bg-brand-teal-600 transform hover:-translate-y-0.5 transition-all"
-                >
-                  Shop Now
-                </a>
-                <a
-                  href="#/dealer"
-                  className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-brand-teal-500 transition"
-                >
-                  Bulk Orders
-                </a>
-              </div>
-            </div>
-            <div className="hidden md:flex justify-center">
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.firebasestorage.app/o/images%2FSlider-poster.jpg?alt=media&token=46783c41-53a6-4f6a-a052-4d42768c0ae2"
-                alt="Premium Orthotics"
-                className="w-full rounded-lg shadow-xl object-cover max-h-[300px]"
-              />
-            </div>
-          </div>
+          <a href="#/products" className="relative rounded-xl overflow-hidden shadow-lg block hover:shadow-2xl transition-shadow">
+            <img
+              src="https://firebasestorage.googleapis.com/v0/b/e-commerce-61d74.firebasestorage.app/o/images%2FSlider-poster.jpg?alt=media&token=46783c41-53a6-4f6a-a052-4d42768c0ae2"
+              alt="Combo Deals"
+              className="w-full h-auto object-cover max-h-96 hover:opacity-95 transition-opacity"
+            />
+          </a>
         </div>
       </div>
 

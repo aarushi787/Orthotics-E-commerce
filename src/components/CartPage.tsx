@@ -224,7 +224,6 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                     `${item.product.name} (${item.product.sku}): ${item.quantity} x ₹${item.product.price}`
                   ).join('\n');
 
-                  const whatsappMessage = `*New Order from Fox Orthotics*\n\n*Customer Details:*\nName: ${customerDetails.name}\nEmail: ${customerDetails.email}\nPhone: ${customerDetails.phone}\nAddress: ${customerDetails.address}\nCity: ${customerDetails.city}, ${customerDetails.state} ${customerDetails.pincode}\n\n*Order Items:*\n${orderDetails}\n\n*Order Summary:*\nSubtotal: ₹${subtotal.toFixed(2)}\nGST (5%): ₹${tax.toFixed(2)}\nTotal: ₹${total.toFixed(2)}`;
 
                   // Open WhatsApp with message
                   const whatsappURL = `https://wa.me/917011770526?text=${encodeURIComponent(whatsappMessage)}`;
@@ -248,7 +247,7 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                     key: RAZORPAY_KEY_ID,
                     amount: razorpayOrder.amount,
                     currency: razorpayOrder.currency || 'INR',
-                    name: 'Fox Orthotics',
+                    name: 'B.R. Surgical',
                     description: 'Order Payment',
                     order_id: razorpayOrder.id,
                     handler: async function (response: any) {

@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-      "title": "Fox Orthotics API",
+      "title": "B.R. Surgical API",
       "version": "1.0.0",
       "description": "Minimal OpenAPI spec for core endpoints"
     },

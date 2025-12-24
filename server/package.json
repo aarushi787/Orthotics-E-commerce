@@ -1,7 +1,7 @@
 {
   "name": "fox-orthotics-backend",
   "version": "1.0.0",
-  "description": "Backend API for the Fox Orthotics e-commerce application.",
+  "description": "Backend API for the B.R. Surgical e-commerce application.",
   "main": "src/server.js",
   "engines": {
     "node": "20.x"

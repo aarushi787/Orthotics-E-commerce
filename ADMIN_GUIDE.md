@@ -1,4 +1,4 @@
-# Fox Orthotics Admin Dashboard - Complete Guide
+# B.R. Surgical Admin Dashboard - Complete Guide
 
 ## 📋 Table of Contents
 1. [Accessing the Admin Dashboard](#accessing-the-admin-dashboard)

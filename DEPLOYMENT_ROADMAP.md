@@ -43,6 +43,7 @@ Firebase Hosting upload is failing due to network/TLS issues on your connection.
 
 **Blocker**: Firebase Hosting upload timeout/TLS issues
 
+
 **What to do while waiting**:
 - Try deploying from different network (mobile hotspot, etc.)
 - Contact Firebase Support with error logs

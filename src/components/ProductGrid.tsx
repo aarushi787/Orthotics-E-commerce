@@ -10,9 +10,10 @@ interface ProductGridProps {
     sortOption: string;
     onSortChange: (value: string) => void;
     onClearFilters: () => void; // Added for the empty state button
+    categoryBanner?: string;
 }
 
-const ProductGrid: React.FC<ProductGridProps> = ({ products, wishlist, onToggleWishlist, onAddToCart, sortOption, onSortChange, onClearFilters }) => {
+const ProductGrid: React.FC<ProductGridProps> = ({ products, wishlist, onToggleWishlist, onAddToCart, sortOption, onSortChange, onClearFilters, categoryBanner }) => {
     return (
         <div>
             <div className="bg-white p-3 rounded-lg shadow-sm border flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
@@ -36,6 +37,12 @@ const ProductGrid: React.FC<ProductGridProps> = ({ products, wishlist, onToggleW
                     </div>
                 </div>
             </div>
+            {/* Category banner placed after sort controls and before product list */}
+            {categoryBanner && (
+                <div className="mb-6 overflow-hidden rounded-lg shadow-sm">
+                    <img src={categoryBanner} alt="category banner" className="w-full object-cover h-44 md:h-56" />
+                </div>
+            )}
             
             {products.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">

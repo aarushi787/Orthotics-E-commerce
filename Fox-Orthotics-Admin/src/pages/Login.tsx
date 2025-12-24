@@ -42,7 +42,7 @@ export default function Login() {
       <div className="login-card">
         <div className="login-header">
           <div className="login-logo">🏥</div>
-          <h1 className="login-title">Fox Orthotics</h1>
+          <h1 className="login-title">B.R. Surgical</h1>
           <p className="login-subtitle">Admin Dashboard</p>
         </div>
 
@@ -87,7 +87,7 @@ export default function Login() {
         </form>
 
         <div className="login-footer">
-          © 2024 Fox Orthotics Admin. All rights reserved.
+          © 2024 B.R. Surgical Admin. All rights reserved.
         </div>
       </div>
     </div>

@@ -110,13 +110,13 @@ const Header: React.FC<HeaderProps> = ({
                         <div className="bg-brand-teal-600 p-2 rounded-full">
                             <img
                                 src={logo}
-                                alt="Fox Orthotics Logo"
+                                alt="B.R. Surgical Logo"
                                 className="w-10 h-10 md:w-12 md:h-12 object-contain"
                             />
                         </div>
 
                         <div>
-                            <h1 className="text-xl md:text-2xl font-bold text-white">Fox Orthotics</h1>
+                            <h1 className="text-xl md:text-2xl font-bold text-white">B.R. Surgical</h1>
                             <p className="text-xs md:text-sm text-gray-300">Premium Orthopedic Solutions</p>
                         </div>
                     </a>

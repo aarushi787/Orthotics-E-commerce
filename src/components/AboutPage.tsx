@@ -11,7 +11,7 @@ const AboutPage: React.FC = () => {
             style={{backgroundImage: "url('https://images.unsplash.com/photo-1580281657527-38f4497136d6?q=80&w=2940&auto=format&fit=crop')"}}>
         </div>
         <div className="relative z-10">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">About Fox Orthotics Industries</h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">About B.R. Surgical Industries</h1>
             <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">
                 Your trusted partner in premium orthopedic solutions, dedicated to enhancing mobility and comfort since 2010.
             </p>
@@ -25,7 +25,7 @@ const AboutPage: React.FC = () => {
             <span className="text-sm font-bold uppercase text-brand-teal-500">Our Mission</span>
             <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-4">Empowering Movement, Enhancing Lives</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              At Fox Orthotics, our mission is to develop and provide high-quality, innovative orthopedic products that empower individuals to live healthier, more active lives. We believe that everyone deserves to move without pain and limitation.
+              At B.R. Surgical, our mission is to develop and provide high-quality, innovative orthopedic products that empower individuals to live healthier, more active lives. We believe that everyone deserves to move without pain and limitation.
             </p>
             <p className="text-gray-600 leading-relaxed">
               We are committed to continuous research and development, working closely with healthcare professionals to create solutions that are not only effective but also comfortable and easy to use. Our focus is on patient outcomes and customer satisfaction.

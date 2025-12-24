@@ -1,6 +1,6 @@
-# Fox Orthotics - Backend API Server
+# B.R. Surgical - Backend API Server
 
-This directory contains the Node.js/Express backend for the Fox Orthotics e-commerce application.
+This directory contains the Node.js/Express backend for the B.R. Surgical e-commerce application.
 
 ## Features
 
