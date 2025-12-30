@@ -1,4 +1,4 @@
-# Postman / cURL snippets for B.R. Surgical API
+# Postman / cURL snippets for Fox Orthotics API
 
 - Base URL: `http://localhost:5000/api`
 

@@ -43,7 +43,7 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
 
     const message = `*New Order from Website*\n\n${customerInfo}\n\n*Order Items:*\n${orderLines}\n\n*Summary:*\n${subtotalStr}\n${taxStr}\n${totalStr}\n\nPlease confirm availability and shipping.`;
 
-    const phone = '917011770526'; // B.R. Surgical
+    const phone = '917011770526'; // Fox Orthotics
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
   };
@@ -247,7 +247,7 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                     key: RAZORPAY_KEY_ID,
                     amount: razorpayOrder.amount,
                     currency: razorpayOrder.currency || 'INR',
-                    name: 'B.R. Surgical',
+                    name: 'Fox Orthotics',
                     description: 'Order Payment',
                     order_id: razorpayOrder.id,
                     handler: async function (response: any) {

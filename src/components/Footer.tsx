@@ -55,8 +55,8 @@ const Footer: React.FC = () => {
           {/* -------- About -------- */}
           <div>
             <h3 className="text-xl font-bold text-white mb-4">
-              B.R. Surgical
-            </h3>
+                Fox Orthotics
+              </h3>
 
             <p className="text-sm leading-relaxed">
               Your trusted partner for premium orthopedic solutions,
@@ -126,10 +126,10 @@ const Footer: React.FC = () => {
               <li className="flex items-center gap-3">
                 <MailIcon className="w-5 h-5 text-teal-400" />
                 <a
-                  href="mailto:info@brsurgical.com"
+                  href="mailto:info@foxorthotics.com"
                   className="hover:text-white"
                 >
-                  info@brsurgical.com
+                  info@foxorthotics.com
                 </a>
               </li>
             </ul>
@@ -173,7 +173,7 @@ const Footer: React.FC = () => {
       <div className="bg-slate-950 py-4">
         <div className="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm text-slate-400">
           <span>
-            © {new Date().getFullYear()} B.R. Surgical.
+            © {new Date().getFullYear()} Fox Orthotics.
             All Rights Reserved.
           </span>
 

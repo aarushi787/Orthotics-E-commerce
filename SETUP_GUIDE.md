@@ -1,4 +1,4 @@
-# Full-Stack Setup Guide: B.R. Surgical
+# Full-Stack Setup Guide: Fox Orthotics
 
 This guide will walk you through setting up the complete full-stack application, including the Node.js/Express backend, MySQL database, and connecting the React frontend.
 

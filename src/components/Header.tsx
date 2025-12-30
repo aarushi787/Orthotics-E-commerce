@@ -67,9 +67,9 @@ const Header: React.FC<HeaderProps> = ({
                             <span>+91 70117 70526</span>
                         </a>
 
-                        <a href="mailto:info@brsurgical.com" className="flex items-center gap-1 hover:text-brand-teal-500">
+                        <a href="mailto:info@foxorthotics.com" className="flex items-center gap-1 hover:text-brand-teal-500">
                             <MailIcon className="w-4 h-4" />
-                            <span className="hidden sm:inline">info@brsurgical.com</span>
+                            <span className="hidden sm:inline">info@foxorthotics.com</span>
                         </a>
 
                         <div className="hidden md:flex items-center gap-1">
@@ -110,13 +110,13 @@ const Header: React.FC<HeaderProps> = ({
                         <div className="bg-brand-teal-600 p-2 rounded-full">
                             <img
                                 src={logo}
-                                alt="B.R. Surgical Logo"
+                                alt="Fox Orthotics Logo"
                                 className="w-10 h-10 md:w-12 md:h-12 object-contain"
                             />
                         </div>
 
                         <div>
-                            <h1 className="text-xl md:text-2xl font-bold text-white">B.R. Surgical</h1>
+                            <h1 className="text-xl md:text-2xl font-bold text-white">Fox Orthotics</h1>
                             <p className="text-xs md:text-sm text-gray-300">Premium Orthopedic Solutions</p>
                         </div>
                     </a>

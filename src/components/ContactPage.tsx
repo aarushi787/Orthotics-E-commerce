@@ -44,7 +44,7 @@ const ContactPage: React.FC = () => {
               <ul className="space-y-4 text-gray-600">
                 <li className="flex items-center gap-3">
                     <MailIcon className="w-6 h-6 text-brand-teal-500"/>
-                    <a href="mailto:info@brsurgical.com" className="hover:text-brand-teal-500">info@brsurgical.com</a>
+                    <a href="mailto:info@foxorthotics.com" className="hover:text-brand-teal-500">info@foxorthotics.com</a>
                 </li>
                  <li className="flex items-center gap-3">
                     <PhoneIcon className="w-6 h-6 text-brand-teal-500"/>

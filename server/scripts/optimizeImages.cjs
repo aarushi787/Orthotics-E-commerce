@@ -16,7 +16,7 @@ if (!fs.existsSync(IMAGES_PATH)) {
 }
 
 console.log("\n🔥 Firebase Admin initialized\n==============================");
-console.log("  B.R. Surgical Image Uploader");
+console.log("  Fox Orthotics Image Uploader");
 console.log("==============================\n");
 
 const folders = fs.readdirSync(IMAGES_PATH);

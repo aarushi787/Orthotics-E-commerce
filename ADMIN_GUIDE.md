@@ -1,4 +1,4 @@
-# B.R. Surgical Admin Dashboard - Complete Guide
+# Fox Orthotics Admin Dashboard - Complete Guide
 
 ## 📋 Table of Contents
 1. [Accessing the Admin Dashboard](#accessing-the-admin-dashboard)
@@ -20,7 +20,7 @@ https://your-site.com/admin
 or locally: http://localhost:5173/admin
 ```
 
-### Step 2: Login
+# Step 2: Login
 1. Enter your **Email** (must be registered as admin in Firebase)
 2. Enter your **Password**
 3. Click "Login"

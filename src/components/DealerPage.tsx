@@ -6,7 +6,7 @@ const DealerPage: React.FC = () => {
     <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         <div className="text-center">
-          <h1 className="text-4xl font-extrabold text-gray-900">Become a B.R. Surgical Dealer</h1>
+          <h1 className="text-4xl font-extrabold text-gray-900">Become a Fox Orthotics Dealer</h1>
           <p className="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
             Partner with a leading name in orthopedic solutions and bring high-quality, trusted products to your customers. Join our network of successful dealers today.
           </p>

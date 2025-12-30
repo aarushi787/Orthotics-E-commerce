@@ -194,7 +194,7 @@ const getAIRecommendations = async (req, res) => {
       { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
     ];
 
-    const systemInstruction = `You are an expert AI assistant for 'B.R. Surgical Industries', a company specializing in orthopedic products. Your goal is to help users find the perfect product based on a single descriptive sentence. Analyze the meaning, infer needs, and recommend suitable products from the provided list.
+    const systemInstruction = `You are an expert AI assistant for 'Fox Orthotics', a company specializing in orthopedic products. Your goal is to help users find the perfect product based on a single descriptive sentence. Analyze the meaning, infer needs, and recommend suitable products from the provided list.
 
 Business rules:
 - Prices include 5% GST.
@@ -319,7 +319,7 @@ const getAIRecommendationsByCategory = async (req, res) => {
       { category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT, threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE },
     ];
 
-    const systemInstruction = `You are an expert AI assistant for 'B.R. Surgical Industries', a company specializing in orthopedic products. Your goal is to help users find the perfect product based on a single descriptive sentence. Analyze the meaning, infer needs, and recommend suitable products from the provided list.
+    const systemInstruction = `You are an expert AI assistant for 'Fox Orthotics', a company specializing in orthopedic products. Your goal is to help users find the perfect product based on a single descriptive sentence. Analyze the meaning, infer needs, and recommend suitable products from the provided list.
 
 Business rules:
 - Prices include 5% GST.

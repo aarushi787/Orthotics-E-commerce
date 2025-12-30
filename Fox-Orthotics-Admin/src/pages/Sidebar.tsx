@@ -32,7 +32,7 @@ export default function Sidebar() {
     <div className="admin-sidebar">
       <div className="admin-sidebar-header">
         <span>🏥</span>
-        <span>B.R. Surgical</span>
+        <span>Fox Orthotics</span>
       </div>
 
       <nav className="admin-sidebar-nav">

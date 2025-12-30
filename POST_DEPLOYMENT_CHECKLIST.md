@@ -209,7 +209,7 @@ On each device:
 
 ## ✅ SEO & Metadata (2 minutes)
 
-- [ ] Page title shows "B.R. Surgical" or similar
+- [ ] Page title shows "Fox Orthotics" or similar
 - [ ] Favicon displays in browser tab
 - [ ] Sitemap accessible at `/sitemap.xml`
 - [ ] Robots.txt accessible at `/robots.txt`
