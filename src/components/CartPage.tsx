@@ -230,7 +230,17 @@ const CartPage: React.FC<CartPageProps> = ({ cartItems, onUpdateQuantity, onRemo
                   window.open(whatsappURL, '_blank');
 
                   // Create razorpay order on server
-                  const razorpayOrder = await api.createRazorpayOrder(total);
+                  // Get recaptcha token first
+                  let recaptchaToken = null;
+                  try {
+                    // dynamically import to avoid bundling if not needed
+                    const { getRecaptchaToken } = await import('./ReCaptcha');
+                    recaptchaToken = await getRecaptchaToken('checkout');
+                  } catch (e) {
+                    // ignore
+                  }
+
+                  const razorpayOrder = await api.createRazorpayOrder(total, recaptchaToken);
 
                   // Load Razorpay script if not loaded
                   if (!(window as any).Razorpay) {

@@ -6,3 +6,8 @@ Allow: /
 
 # To block staging or admin paths, add lines like:
 # Disallow: /admin/
+
+User-agent: *
+Disallow: /admin
+Disallow: /login
+Disallow: /checkout

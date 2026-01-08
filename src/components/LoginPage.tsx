@@ -1,5 +1,6 @@
 
 import React from 'react';
+import ReCaptchaPlaceholder, { getRecaptchaToken } from './ReCaptcha';
 
 const LoginPage: React.FC = () => {
   return (
@@ -16,7 +17,14 @@ const LoginPage: React.FC = () => {
             </a>
           </p>
         </div>
-        <form className="mt-8 space-y-6" action="#" method="POST">
+        <form onSubmit={async (e) => {
+          e.preventDefault();
+          // Get recaptcha token before proceeding
+          const token = await getRecaptchaToken('login')
+          // TODO: send `token` to server as part of login request
+          console.log('recaptcha token (login):', token);
+          // proceed with normal login flow (not implemented here)
+        }} className="mt-8 space-y-6" action="#" method="POST">
           <input type="hidden" name="remember" defaultValue="true" />
           <div className="rounded-md shadow-sm -space-y-px">
             <div>
@@ -78,6 +86,7 @@ const LoginPage: React.FC = () => {
             </button>
           </div>
         </form>
+        <ReCaptchaPlaceholder />
       </div>
     </div>
   );

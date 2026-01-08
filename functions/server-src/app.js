@@ -17,11 +17,26 @@ const createApp = () => {
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
 
+  // Rate limiting to slow down automated abuse
+  try {
+    const { globalLimiter } = require('./middleware/rateLimiter');
+    app.use(globalLimiter);
+  } catch (e) {
+    // noop
+  }
+
   // API routes
   app.use("/api/products", productRoutes);
   app.use("/api/admin", adminProductRoutes);
   app.use("/api/auth", authRoutes);
   app.use("/api/reviews", reviewRoutes);
+
+  // Export verifyRecaptcha middleware for protecting specific endpoints
+  try {
+    app.verifyRecaptcha = require('./middleware/verifyRecaptcha');
+  } catch (e) {
+    // noop
+  }
 
   app.get("/health", (_, res) => res.json({ status: "running" }));
 

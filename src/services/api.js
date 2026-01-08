@@ -33,19 +33,19 @@ export async function getProductById(id) {
 }
 
 // Razorpay + Orders
-export async function createRazorpayOrder(amount) {
+export async function createRazorpayOrder(amount, recaptchaToken = null) {
   return request(`${API_BASE}/api/payments/create-order`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ amount }),
+    body: JSON.stringify({ amount, recaptchaToken }),
   });
 }
 
-export async function createOrder(items, total, tax, shipping, address, paymentId) {
+export async function createOrder(items, total, tax, shipping, address, paymentId, recaptchaToken = null) {
   return request(`${API_BASE}/api/orders`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ items, total, tax, shipping, address, paymentId }),
+    body: JSON.stringify({ items, total, tax, shipping, address, paymentId, recaptchaToken }),
   });
 }
 

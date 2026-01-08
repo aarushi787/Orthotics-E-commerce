@@ -14,12 +14,16 @@ const ContactPage = lazy(() => import("./components/ContactPage"));
 const DealerPage = lazy(() => import("./components/DealerPage"));
 const WishlistPage = lazy(() => import("./components/WishlistPage"));
 const CartPage = lazy(() => import("./components/CartPage"));
+const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("./components/TermsAndConditions"));
+const ContactInformation = lazy(() => import("./components/ContactInformation"));
 import Toast from "./components/Toast";
 import PageTransition from "./components/PageTransition";
 import SkeletonCard from "./components/SkeletonCard";
 
 // ⬇️ Admin Panel (lazy-load admin bundle)
 const AdminApp = lazy(() => import("./admin/AdminApp"));
+import AuthGuard from "./utils/AuthGuard";
 
 // ⬇️ Services & Types
 import api from "./services/api";
@@ -236,7 +240,9 @@ const App: React.FC = () => {
     if (currentPath.startsWith("#/admin"))
       return (
         <Suspense fallback={<div>Loading admin…</div>}>
-          <AdminApp />
+          <AuthGuard>
+            <AdminApp />
+          </AuthGuard>
         </Suspense>
       );
 
@@ -281,6 +287,27 @@ const App: React.FC = () => {
       return (
         <Suspense fallback={<div>Loading…</div>}>
           <DealerPage />
+        </Suspense>
+      );
+
+    if (currentPath === "#/privacy")
+      return (
+        <Suspense fallback={<div>Loading…</div>}>
+          <PrivacyPolicy />
+        </Suspense>
+      );
+
+    if (currentPath === "#/terms")
+      return (
+        <Suspense fallback={<div>Loading…</div>}>
+          <TermsAndConditions />
+        </Suspense>
+      );
+
+    if (currentPath === "#/contact-info")
+      return (
+        <Suspense fallback={<div>Loading…</div>}>
+          <ContactInformation />
         </Suspense>
       );
 
